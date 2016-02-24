@@ -5,7 +5,7 @@ export default class NoMatch extends Component{
     return(
       <div>
         <h2>404</h2>
-        <div>No Found....</div>
+        <div>Not Found....</div>
       </div>
     )
   }
