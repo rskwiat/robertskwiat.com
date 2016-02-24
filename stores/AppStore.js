@@ -18,9 +18,16 @@ export default _.extend({}, EventEmitter.prototype, {
       {id: 5, link: 'work', title: "Work"},
       {id: 6, link: 'contact', title: "Contact"},
     ],
-    workdetail:{
-      test: { slug: 'gillette', item: 'name', image: 'url...'}
-    }
+    workdetail:[
+      { slug: 'test',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut lacinia lacus. Quisque aliquam lacus id erat auctor, ut feugiat arcu gravida. Nulla at euismod mauris. Donec non posuere libero. Aenean ante quam, dignissim vitae quam eget, aliquet sodales leo. Donec eu fringilla nisi, a commodo quam.',
+        heroImage: 'path/to/hero.jpg',
+        thumbNail: 'path/to/thumbnail.jpg' },
+      { slug: 'gillette',
+        details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut lacinia lacus. Quisque aliquam lacus id erat auctor, ut feugiat arcu gravida. Nulla at euismod mauris. Donec non posuere libero. Aenean ante quam, dignissim vitae quam eget, aliquet sodales leo. Donec eu fringilla nisi, a commodo quam.',
+        heroImage: 'path/to/hero.jpg',
+        thumbNail: 'path/to/thumbnail.jpg' },
+    ]
   },
 
   // Emit Change event

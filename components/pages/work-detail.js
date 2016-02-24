@@ -4,26 +4,37 @@ export default class WorkDetail extends Component{
 
   componentWillMount(){
 
-
-
-
   }
 
+  componentWillUpdate(){
+
+  }
 
   render(){
 
     const data = this.props.data;
     const detail = data.workdetail;
 
-    const slug_arr = window.location.href.split('/');
-    const page_slug = slug_arr[4];
+    const location = this.props.location.pathname.split('/');
+    const slug = location[2];
+    let heroImage = '';
+    let detailWriteup = '';
 
-    
+
+    for (var i = 0; i < detail.length; i++) {
+      if ( detail[i].slug == slug) {
+        heroImage = detail[i].image;
+        detailWriteup = detail[i].details;
+        break;
+      } else {
+        detailWriteup = 'Work Not Found';
+      }
+    }
+
     return(
       <div>
-        <h2>Work Detail Page</h2>
-
-        <div>Some Work Page Content</div>
+        <img src="{ heroImage }"/>
+        <p>{detailWriteup}</p>
       </div>
     )
 
