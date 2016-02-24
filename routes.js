@@ -4,7 +4,6 @@ import { Route, IndexRoute, Link } from 'react-router';
 import AppStore from './stores/AppStore';
 
 import App from './components/app';
-
 import Home from './components/pages/home';
 import About from './components/pages/about';
 import Work from './components/pages/work';

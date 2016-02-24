@@ -4,7 +4,6 @@ import { Router } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 const history = createBrowserHistory();
 
-
 import routes from './routes'
 
 const Routes = (
