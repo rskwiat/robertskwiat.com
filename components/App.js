@@ -1,44 +1,29 @@
-import React, { Component } from 'react'
-import { Route, IndexRoute, Link } from 'react-router';
+var React = require('react');
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
 
-import AppStore from '../stores/AppStore';
 
-import Nav from './partials/nav';
-export default class App extends Component{
+var Nav = require('./partials/nav');
+
+var App = React.createClass({
 
   // Add change listeners to stores
-  componentDidMount(){
+  componentDidMount: function(){
     setTimeout(() => {
       document.body.classList.remove('hidden');
     }, 500);
-    AppStore.addChangeListener(this._onChange.bind(this))
   }
 
-  // Remove change listeners from stores
-  componentWillUnmount(){
-    AppStore.removeChangeListener(this._onChange.bind(this))
-  }
-
-  _onChange(){
-    this.setState(AppStore)
-  }
-
-  getStore(){
-    AppDispatcher.dispatch({
-      action: 'get-app-store'
-    })
-  }
-
-  render(){
-
-    const data = AppStore.data
-    const Routes = React.cloneElement(this.props.children, { data: data })
-
+  render: function() {
     return(
       <div>
-          <Nav data={ data }/>
-          { Routes }
+          <Nav />
       </div>
     )
   }
-}
+
+})
+
+module.exports = App;

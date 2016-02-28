@@ -1,12 +1,17 @@
+var webpack = require('webpack');
+
 // webpack.config.js
 if(process.env.NODE_ENV === 'development'){
   var loaders = ['react-hot','babel']
 } else {
   var loaders = ['babel']
 }
+
 module.exports = {
   devtool: 'eval',
-  entry: './app-client.js',
+  entry: {
+     client: ['./app-client.js'],
+  },
   output: {
     path: __dirname + '/public/dist',
     filename: 'bundle.js',
