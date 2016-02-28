@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+var React = require('react');
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
 
-export default class Nav extends Component {
-
+var Nav = React.createClass({
 
   render(){
 
@@ -20,11 +22,13 @@ export default class Nav extends Component {
     return (
       <div>
         <ul className="nav navbar-nav navbar-right">
-          { menu_items }
+          <li><Link to="/">title</Link></li>
         </ul>
       </div>
     )
 
   }
 
-}
+});
+
+module.exports = Nav;

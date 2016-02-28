@@ -1,25 +1,29 @@
-import React, { Component } from 'react';
-import { Route, IndexRoute, Link } from 'react-router';
+var ReactRouter = require('react-router');
+var Router = ReactRouter.Router;
+var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
 
-import AppStore from './stores/AppStore';
+var React = require('react');
 
-import App from './components/app';
-import Home from './components/pages/home';
-import About from './components/pages/about';
-import Work from './components/pages/work';
-import WorkDetail from './components/pages/work-detail';
-import Contact from './components/pages/contact';
-import NoMatch from './components/partials/nomatch';
+var AppStore = require('./stores/AppStore');
+var App = require('./components/app');
+// var Home = require('./components/pages/home');
+// var About = require('./components/pages/about');
+// var Work = require('./components/pages/work');
+// var WorkDetail = require('./components/pages/work-detail');
+// var Contact = require('./components/pages/contact');
+// var NoMatch = require('./components/partials/nomatch');
 
-const data = AppStore.data;
+var data = AppStore.data;
 
-export default(
+
+module.exports = (
     <Route path="/" component={App}>
-      <IndexRoute component={Home} data={data}/>
-      <Route path="about" component={About} data={data}/>
-      <Route path="work" component={Work}/>
-      <Route path="work/:detail" component={WorkDetail} data={data}/>
-      <Route path="contact" component={Contact}/>
-      <Route path="*" component={NoMatch}/>
+      // <IndexRoute component={Home} data={data}/>
+      // <Route path="about" component={About} data={data}/>
+      // <Route path="work" component={Work}/>
+      // <Route path="work/:detail" component={WorkDetail} data={data}/>
+      // <Route path="contact" component={Contact}/>
+      // <Route path="*" component={NoMatch}/>
     </Route>
 )
