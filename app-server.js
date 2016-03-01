@@ -1,46 +1,41 @@
-var react = require('react');
-var ReactDOMServer = require('react-dom/server');
-var express = require('express');
-var hogan = require('hogan-express');
+// server.js
 
-var Router = require('react-router');
-
-var match = Router.match;
-var RoutingContext = Router.RoutingContext;
-require("node-jsx").install();
-
-
-var routes = require('./routes');
-// import routes from './routes';
+import express from 'express';
+import path from 'path';
+import fs from 'fs';
+import ejs from 'ejs';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
+import { Router, match, RouterContext } from 'react-router';
+import Location from 'history/lib/createLocation';
+import routes from './app/routes';
 
 const app = express();
-app.engine('html', hogan);
-app.set('views', __dirname + '/views');
-app.use('/', express.static(__dirname + '/public'));
-app.set('port', (process.env.PORT || 3000));
+const port = 4444;
 
-app.get('*', function(req, res){
-  console.log(res);
-});
+app.use(express.static('public'));
+app.set('views', path.join(__dirname, 'public'));
+app.set('view engine', 'ejs');
 
-// app.get('*', (req,res) => {
-//     match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-//
-//     const reactMarkup = ReactDOMServer.renderToStaticMarkup(<RoutingContext {...renderProps}/>)
-//     res.locals.reactMarkup = reactMarkup
-//
-//     if(error){
-//       res.status(500).send(error.message)
-//     } else if (redirectLocation){
-//       res.redirectLocation(302, redirectLocation.pathname + redirectLocation.search)
-//     } else if (renderProps) {
-//       res.status(200).render('index.html')
-//     } else{
-//       res.status(404).render('index.html')
-//     }
-//   });
-// });
 
-app.listen(app.get('port'));
-console.info('==> Server is listening in production mode')
-console.info('==> Go to http://localhost:%s', app.get('port'))
+app.get('*', function(req, res) {
+  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    var content = ReactDOMServer.renderToString(<RouterContext {...renderProps}/>);
+
+
+    if (error) {
+      res.status(500).send(error.message)
+    } else if (redirectLocation) {
+      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+    } else if (renderProps) {
+      res.render('index.ejs', {html: content});
+    } else {
+      res.status(404).send('Not found')
+    }
+  })
+})
+
+app.listen(port);
+console.log('Server is Up and Running at Port : ' + port);
