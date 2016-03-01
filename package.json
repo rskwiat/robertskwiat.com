@@ -17,13 +17,15 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "watchify": "^3.7.0"
   },
   "scripts": {
-    "pre:development": "npm run compile:sass",
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
-    "development": "node ./node_modules/browserify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
-    "compile:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css"
+    "serve": "npm run copy && cd public && node ../node_modules/static-server/bin/static-server",
+    "dev": "node ./node_modules/watchify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
+    "compile:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
+    "prodution": "npm run app.js"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +33,7 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "node-jsx": "^0.13.3",
-    "node-sass": "^3.4.2"
+    "node-sass": "^3.4.2",
+    "static-server": "^2.0.1"
   }
 }
