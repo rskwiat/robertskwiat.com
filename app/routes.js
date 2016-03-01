@@ -1,88 +1,20 @@
 import React, { Component } from 'react'
 import { Route, IndexRoute, Link } from 'react-router'
 
-// Main component
-class App extends Component {
-  componentDidMount(){
-    document.body.className=''
-  }
-  render(){
-    return (
-      <div>
-        <h1>WIP</h1>
-           <nav>
-              <ul>
-                <li>test</li>
-                 <li><Link to="/">Home</Link></li>
-                 <li><Link to="/about">About</Link></li>
-                 <li><Link to="/work">Work</Link></li>
-                 <li><Link to="/contact">Contact</Link></li>
-              </ul>
-           </nav>
-        { this.props.children }
-      </div>
-    )
-  }
-}
+
+import Nav from './components/partials/nav';
 
 // Pages
-class Home extends Component {
-  render(){
-    return (
-      <div>
-        <h2>Home</h2>
-        <div>Some home page content</div>
-      </div>
-    )
-  }
-}
-class About extends Component {
-  render(){
-    return (
-      <div>
-        <h2>About</h2>
-        <div>Some about page content</div>
-      </div>
-    )
-  }
-}
-class Work extends Component {
-  render(){
-    return (
-      <div>
-        <h2>Work</h2>
-        <div>Some work page content</div>
-      </div>
-    )
-  }
-}
-class Contact extends Component {
-  render(){
-    return (
-      <div>
-        <h2>Contact</h2>
-        <div>Some contact page content</div>
-      </div>
-    )
-  }
-}
-class NoMatch extends Component {
-  render(){
-    return (
-      <div>
-        <h2>NoMatch</h2>
-        <div>404 error</div>
-      </div>
-    )
-  }
-}
+import Home from './components/pages/home';
+import About from './components/pages/about';
+import Work from './components/pages/work';
+import NoMatch from './components/pages/error';
 
 export default (
-  <Route path="/" component={App}>
+  <Route path="/" component={Nav}>
     <IndexRoute component={Home}/>
     <Route path="about" component={About}/>
     <Route path="work" component={Work}/>
-    <Route path="contact" component={Contact}/>
     <Route path="*" component={NoMatch}/>
   </Route>
 )

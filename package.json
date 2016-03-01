@@ -23,7 +23,7 @@
   "scripts": {
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
     "serve": "npm run copy && cd public && node ../node_modules/static-server/bin/static-server",
-    "dev": "node ./node_modules/watchify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
+    "dev": "node ./node_modules/browserify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
     "compile:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
     "prodution": "npm run app.js"
   },
