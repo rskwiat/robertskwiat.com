@@ -19,12 +19,9 @@ app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-
 app.get('*', function(req, res) {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
     var content = ReactDOMServer.renderToString(<RouterContext {...renderProps}/>);
-
-
     if (error) {
       res.status(500).send(error.message)
     } else if (redirectLocation) {
@@ -32,10 +29,20 @@ app.get('*', function(req, res) {
     } else if (renderProps) {
       res.render('index.ejs', {html: content});
     } else {
-      res.status(404).send('Not found')
+      res.render('index.ejs', {html: content});
     }
   })
-})
+});
+
+app.get('/robots.txt', function (req, res) {
+  res.type('text/plain');
+  res.sendFile('public/robots.txt');
+});
+
+app.get('/humans.txt', function (req, res) {
+  res.type('text/plain');
+  res.sendFile('public/humans.txt');
+});
 
 app.listen(port);
-console.log('Server is Up and Running at Port : ' + port);
+console.log('Server is Up and Running at Port:' + port);

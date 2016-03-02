@@ -1,7 +1,7 @@
 {
   "name": "robertskwiat.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Isomorphic React + Express",
   "main": "index.js",
   "dependencies": {
     "babel": "^6.5.2",
@@ -22,10 +22,11 @@
   },
   "scripts": {
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
-    "serve": "npm run copy && cd public && node ../node_modules/static-server/bin/static-server",
-    "dev": "node ./node_modules/browserify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
+    "serve": "npm run copy && cd public && node ../node_modules/static-server/bin/static-server -p 9999",
+    "preserve": "open http://localhost:9999",
+    "dev": "node ./node_modules/watchify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
     "compile:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
-    "prodution": "npm run app.js"
+    "production": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -35,5 +36,13 @@
     "node-jsx": "^0.13.3",
     "node-sass": "^3.4.2",
     "static-server": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rskwiat/robertskwiat.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rskwiat/robertskwiat.com/issues"
+  },
+  "homepage": "https://github.com/rskwiat/robertskwiat.com#readme"
 }

@@ -1,28 +1,27 @@
-
-import React, { Component } from 'react'
-import { Route, IndexRoute, Link } from 'react-router'
+import React, { Component } from 'react';
+import { Route, IndexRoute, Link } from 'react-router';
 
 import Header from './header';
+import Footer from './footer';
+import NavLink from './nav-link';
 
-// Main component
-export default class App extends Component {
-  componentDidMount(){
-    document.body.className=''
+export default class Nav extends Component {
+  toggleMenu(){
   }
+
   render(){
     return (
       <div>
         <Header />
            <nav>
-           <p>in secondary nav file</p>
               <ul>
-                 <li><Link to="/">Home</Link></li>
-                 <li><Link to="/about">About</Link></li>
-                 <li><Link to="/work">Work</Link></li>
-                 <li><Link to="/contact">Contact</Link></li>
+                 <NavLink path="/" name="Home" />
+                 <NavLink path="/about" name="About" />
+                 <NavLink path="/work" name="Work" />
               </ul>
            </nav>
         { this.props.children }
+        <Footer />
       </div>
     )
   }
