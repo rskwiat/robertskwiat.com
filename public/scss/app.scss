@@ -1,0 +1,51 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.debug{
+  border: 1px solid red !important;
+}
+
+@import "functions";
+@import "normalize";
+
+a, a:focus, a:hover{
+	text-decoration: none;
+}
+
+.browserupgrade {
+	margin: 0.2em 0;
+	background: yellow;
+	color: #000;
+	font-size: 1.2em;
+	padding: 0.2em 0;
+	text-align: center;
+}
+
+.text-center{
+	text-align: center;
+}
+
+/*
+  Grid & Layout
+*/
+
+.container{
+  width: 98%;
+  max-width: 1440px;
+  @include make-container();
+}
+
+.column-8{
+  @include make-column();
+  @include make-column-span(8);
+}
+
+.column-centered{
+  @include make-column-centered();
+}
+
+
+/*
+  Header Specific & Navigation Styling
+*/
