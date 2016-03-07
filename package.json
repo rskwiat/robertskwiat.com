@@ -16,16 +16,18 @@
     "hogan-express": "^0.5.2",
     "react": "^0.14.3",
     "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
+    "redux": "^3.3.1",
     "underscore": "^1.8.3",
     "watchify": "^3.7.0"
   },
   "scripts": {
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
     "serve": "npm run copy && cd public && node ../node_modules/static-server/bin/static-server -p 9999",
-    "preserve": "open http://localhost:9999",
-    "dev": "node ./node_modules/watchify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
-    "compile:sass": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
+    "postserve": "open http://localhost:9999",
+    "dev": "npm run compile:sass && node ./node_modules/watchify/bin/cmd app/app.js -t babelify -o public/dist/bundle.js",
+    "compile:sass": "node ./node_modules/node-sass/bin/node-sass -w --output-style compressed public/scss/app.scss public/css/app.css",
     "production": "node app.js"
   },
   "author": "",
