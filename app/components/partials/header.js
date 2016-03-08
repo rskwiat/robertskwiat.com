@@ -6,16 +6,14 @@ export default class Header extends Component {
   }
   render(){
     return (
-      <div>
-          <header>
-          {this.props.data}
-            <div className="container">
-              <div className="column column-12">
-                <h1 id="logo">Robert Skwiat</h1>
-              </div>
+        <header>
+        {this.props.data}
+          <div className="container">
+            <div className="column column-12">
+              <h1 id="logo">Robert Skwiat</h1>
             </div>
-          </header>
-      </div>
+          </div>
+        </header>
     )
   }
 }
