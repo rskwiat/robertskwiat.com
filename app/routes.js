@@ -10,6 +10,7 @@ import Work from './components/pages/work';
 import WorkDetail from './components/pages/work-detail';
 import NoMatch from './components/pages/error';
 
+
 export default (
   <Route path="/" component={Nav}>
     <IndexRoute component={Home}/>

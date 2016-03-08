@@ -1,9 +1,11 @@
+console.log('App is loaded');
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 
 // Routes
-import routes from './routes'
+import routes from './routes';
 
 const Routes = (
   <Router history={browserHistory}>
