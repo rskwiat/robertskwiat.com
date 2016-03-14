@@ -27,8 +27,20 @@ a, a:focus, a:hover{
 }
 
 /*
+  Typography
+*/
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0 0 20px 0;
+}
+
+/*
   Grid & Layout
 */
+
+#app{
+  position: relative;
+}
 
 .container{
   width: 98%;
@@ -50,7 +62,136 @@ a, a:focus, a:hover{
   Header Specific & Navigation Styling
 */
 
-
 header{
   background: #ccc;
+  min-height: 300px;
+  @media #{$md-screen}{
+    height: 450px;
+  }
+}
+
+#logo{
+  background: url('../images/rs-logo.svg') no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 65px;
+  margin: 0;
+  text-indent: -999em;
+  display: inline-block;
+
+  @media #{$md-screen}{
+    height: 406px;
+  }
+
+}
+
+
+nav{
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // z-index: 25;
+}
+
+nav ul{
+  position: absolute;
+  top: 50px;
+  list-style: none;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: rgba(0,0,0,.75);
+  transform: translateX(-500px);
+  transition: all .5s ease;
+  @media #{$md-screen}{
+    width: 300px;
+  }
+  li{
+    text-align: center;
+    a{
+      padding: 20px 0;
+      display: inline-block;
+      width: 100%;
+      color: #fff;
+    }
+  }
+}
+
+nav ul.open{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+.menu-toggle {
+	width: 44px;
+	height: 44px;
+	float: right;
+	top: 3px;
+	right: 15px;
+	z-index: 15;
+  background: $brand;
+  border-radius: 360px;
+  box-shadow: 0px 3px 3px rgba(0,0,0,.3);
+}
+
+.menu-toggle .bar {
+	background-color: white;
+	display: block;
+	width: 20px;
+	height: 2px;
+	border-radius: 100px;
+	position: absolute;
+	top: 22px;
+	right: 12px;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.menu-toggle .bar:first-child {
+	-webkit-transform: translateY(-6px);
+	transform: translateY(-6px);
+}
+
+.menu-toggle .bar:nth-child(3) {
+	-webkit-transform: translateY(6px);
+	transform: translateY(6px);
+}
+
+.menu-toggle.x .bar:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.menu-toggle.x .bar:nth-child(3) {
+  opacity: 0;
+}
+
+.menu-toggle.x .bar:first-child {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+/*
+  Footer Specific Styling
+*/
+
+footer{
+  background: #ecf0f1;
+  text-align: center;
+  padding: 40px 0;
+  margin: 40px 0 0 0;
+}
+
+.social-icons a{
+  font-size: 30px;
+  padding: 0 20px 0 0;
+  color: #333;
+}
+
+.social-icons span:nth-child(3) a{
+  padding: 0;
 }

@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { Route, IndexRoute, Link } from 'react-router'
 
-import Nav from './components/partials/nav';
+import Nav from '../components/partials/nav';
 
 // Pages
-import Home from './components/pages/home';
-import About from './components/pages/about';
-import Work from './components/pages/work';
-import WorkDetail from './components/pages/work-detail';
-import NoMatch from './components/pages/error';
+import Home from '../components/pages/home';
+import About from '../components/pages/about';
+import Work from '../components/pages/work';
+import WorkDetail from '../components/pages/work-detail';
+import NoMatch from '../components/pages/error';
 
 
 export default (
