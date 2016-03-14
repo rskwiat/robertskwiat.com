@@ -11,9 +11,9 @@ export default class Footer extends Component {
         <div className="container">
           <Copyright />
           <div className="social-icons">
-            <Icons icon="fa fa-linkedin-square" title="linkedin" link="http://www.linkedin.com/in/robertskwiat"/>
-            <Icons icon="fa fa-twitter-square" title="twitter" link="http://twitter.com/RobertSkwiat"/>
-            <Icons icon="fa fa-github-square" title="github" link="http://github.com/rskwiat"/>
+            <Icons icon="fa fa-linkedin" title="linkedin" link="http://www.linkedin.com/in/robertskwiat"/>
+            <Icons icon="fa fa-twitter" title="twitter" link="http://twitter.com/RobertSkwiat"/>
+            <Icons icon="fa fa-github" title="github" link="http://github.com/rskwiat"/>
           </div>
         </div>
       </footer>

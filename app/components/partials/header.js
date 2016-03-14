@@ -2,7 +2,7 @@ import React, { Component} from 'react';
 
 export default class Header extends Component {
   componentDidMount(){
-    document.body.className = 'rendered'
+    document.body.className = 'debug'
   }
   render(){
     return (
