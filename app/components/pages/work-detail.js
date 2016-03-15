@@ -23,8 +23,6 @@ class WorkDetail extends Component{
     let heroImage = '';
     let detailWriteup = '';
 
-    console.log(slug);
-
     for (var i = 0; i < data.length; i++) {
       if (data[i].title == slug){
         detailWriteup = 'Page exists';

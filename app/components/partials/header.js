@@ -1,16 +1,14 @@
 import React, { Component} from 'react';
 
 export default class Header extends Component {
-  componentDidMount(){
-    document.body.className = 'debug'
-  }
   render(){
     return (
-        <header>
-        {this.props.data}
+        <header style={{
+            height: this.props.height + 'px',
+            background: 'url(' + this.props.imgUrl + ') no-repeat' }}>
           <div className="container">
             <div className="column column-12">
-              <h1 id="logo">Robert Skwiat</h1>
+              <h1 id={this.props.id}>{this.props.name}</h1>
             </div>
           </div>
         </header>
