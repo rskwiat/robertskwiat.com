@@ -362,6 +362,9 @@ td,
 th {
   padding: 0; }
 
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 a, a:focus, a:hover {
   text-decoration: none; }
 
@@ -380,6 +383,9 @@ a, a:focus, a:hover {
   Typography
 */
 h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px 0; }
+
+p {
   margin: 0 0 20px 0; }
 
 /*
@@ -402,7 +408,10 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 1px;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  width: 66.66667%; }
+  width: 100%; }
+  @media (min-width: 768px) {
+    .column-8 {
+      width: 66.66667%; } }
 
 .column-centered {
   float: none;
@@ -436,7 +445,7 @@ nav ul {
   top: 50px;
   list-style: none;
   opacity: 0;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.75);
@@ -446,22 +455,27 @@ nav ul {
     nav ul {
       width: 300px; } }
   nav ul li {
-    text-align: center; }
+    text-align: right;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.5); }
+    nav ul li:last-child {
+      border-bottom: 0; }
     nav ul li a {
       padding: 20px 0;
       display: inline-block;
       width: 100%;
-      color: #fff; }
+      color: #fff;
+      font-size: 24px; }
 
 nav ul.open {
   opacity: 1;
   transform: translateX(0); }
 
 .menu-toggle {
+  position: fixed;
   width: 44px;
   height: 44px;
   float: right;
-  top: 3px;
+  top: 15px;
   right: 15px;
   z-index: 15;
   background: #429591;
@@ -499,6 +513,12 @@ nav ul.open {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
+#about {
+  margin: 20px auto; }
+  @media (min-width: 768px) {
+    #about {
+      margin: 40px auto; } }
+
 /*
   Footer Specific Styling
 */
@@ -515,3 +535,38 @@ footer {
 
 .social-icons span:nth-child(3) a {
   padding: 0; }
+
+/*
+  Button and Styling
+*/
+.btn {
+  display: inline-block;
+  padding: .375rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  border: .0625rem solid transparent;
+  border-radius: 0;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  transition: all .25s linear; }
+
+.btn-inverse {
+  color: #3D3A3B;
+  background: none;
+  border: 0.063rem solid #3D3A3B; }
+
+.btn-inverse:hover {
+  background: #3D3A3B;
+  color: #FFF; }
+
+button[disabled], html input[disabled] {
+  cursor: not-allowed; }
