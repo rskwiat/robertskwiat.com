@@ -17,13 +17,16 @@ class Home extends Component {
   render(){
     return (
       <div>
-        <Header imgUrl='http://i.imgur.com/5lslF2U.jpg' id='logo' name='Robert Skwiat'/>
-        <section id="about" className="column column-8 column-centered">
-          {this.renderContent()}
-          <p><a className="btn btn-inverse" href="#">Download Resume</a></p>
-        </section>
+        <div className="container">
+          <Header imgUrl='http://i.imgur.com/5lslF2U.jpg' id='logo' name='Robert Skwiat'/>
+        </div>
+        <div className="container">
+          <section id="about" className="content centered">
+            {this.renderContent()}
+            <p><a className="btn btn-inverse" href="#">Download Resume</a></p>
+          </section>
+        </div>
       </div>
-
     )
   }
 }
