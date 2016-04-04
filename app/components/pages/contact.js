@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import Header from '../partials/header';
 
 export default class Contact extends Component {
 
     render(){
       return (
         <div>
-          <h2>About</h2>
-          <div>Some about page content</div>
-          <h3>About seperate JS page...</h3>
+          <Header imgUrl='' id='' name='About'/>
+
         </div>
       )
     }

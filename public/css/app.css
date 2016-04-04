@@ -395,38 +395,27 @@ p {
   position: relative; }
 
 .container {
-  width: 98%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem; }
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
-.column-8 {
-  position: relative;
-  float: left;
-  min-height: 1px;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 100%; }
+.content {
+  padding: 0.9375rem;
+  flex: 1 800px;
+  flex-grow: 2; }
+
+#about {
+  background: #fff;
+  margin: 1.25rem auto 1.25rem; }
   @media (min-width: 768px) {
-    .column-8 {
-      width: 66.66667%; } }
-
-.column-centered {
-  float: none;
-  margin: 0 auto;
-  position: relative; }
+    #about {
+      margin: -2.5rem auto 2.5rem; } }
 
 /*
   Header Specific & Navigation Styling
 */
 header {
-  background: #ccc;
-  min-height: 300px; }
-  @media (min-width: 768px) {
-    header {
-      height: 450px; } }
+  flex: 1 100%; }
 
 #logo {
   background: url("../images/rs-logo.svg") no-repeat;
@@ -442,21 +431,25 @@ header {
 
 nav ul {
   position: absolute;
-  top: 50px;
   list-style: none;
   opacity: 0;
   padding: 0 20px;
   margin: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  transform: translateX(-500px);
-  transition: all .5s ease; }
+  transform: translateY(-1000px);
+  background: rgba(0, 0, 0, 0.85);
+  transition: all .5s ease;
+  z-index: 100; }
   @media (min-width: 768px) {
     nav ul {
-      width: 300px; } }
+      background: rgba(0, 0, 0, 0.75);
+      width: 300px;
+      right: 0; } }
   nav ul li {
     text-align: right;
     border-bottom: 5px solid rgba(0, 0, 0, 0.5); }
+    nav ul li:first-child {
+      margin-top: 50px; }
     nav ul li:last-child {
       border-bottom: 0; }
     nav ul li a {
@@ -468,7 +461,12 @@ nav ul {
 
 nav ul.open {
   opacity: 1;
-  transform: translateX(0); }
+  height: 100%;
+  display: block;
+  transform: translateY(0px); }
+  @media (min-width: 768px) {
+    nav ul.open {
+      width: 300px; } }
 
 .menu-toggle {
   position: fixed;
@@ -477,7 +475,7 @@ nav ul.open {
   float: right;
   top: 15px;
   right: 15px;
-  z-index: 15;
+  z-index: 105;
   background: #429591;
   border-radius: 360px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3); }
@@ -512,12 +510,6 @@ nav ul.open {
 .menu-toggle.x .bar:first-child {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
-
-#about {
-  margin: 20px auto; }
-  @media (min-width: 768px) {
-    #about {
-      margin: 40px auto; } }
 
 /*
   Footer Specific Styling
