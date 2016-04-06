@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, IndexRoute, Link } from 'react-router';
 
-import Footer from './footer';
 import NavLink from './nav-link';
 import NavButton from './nav-button';
 
@@ -20,18 +19,24 @@ export default class Nav extends Component {
   render(){
     return (
       <div>
-         <nav>
-           <NavButton event={this.toggleMenu.bind() }/>
-            <ul>
-               <NavLink path="/" name="About" event={this.toggleMenu.bind()} />
-               <NavLink path="/skills" name="Skills" event={this.toggleMenu.bind()} />
-               <NavLink path="/contact" name="Contact" event={this.toggleMenu.bind()} />
-               <NavLink path="/work" name="Work" event={this.toggleMenu.bind()} />
-            </ul>
-         </nav>
         { this.props.children }
-        <Footer />
       </div>
     )
   }
 }
+
+
+
+/*
+
+<!--
+ <nav>
+   <NavButton event={this.toggleMenu.bind() }/>
+    <ul>
+       <NavLink path="/" name="About" event={this.toggleMenu.bind()} />
+       <NavLink path="/skills" name="Skills" event={this.toggleMenu.bind()} />
+       <NavLink path="/work" name="Work" event={this.toggleMenu.bind()} />
+    </ul>
+ </nav> -->
+
+ */
