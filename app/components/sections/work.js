@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
 import { Route, IndexRoute, Link } from 'react-router';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import NavLink from '../partials/nav-link';
 
-export default class Work extends Component {
+class Work extends Component {
+
+  renderContent(){
+    return this.props.data.map((data) => {      
+      return(
+        <div>
+          <p key={data.id}>{data.blurb}</p>
+        </div>
+      );
+    });
+  }
+
   render(){
+
+
     return (
-      <div>
-        <h2>Work</h2>
-          <NavLink path="/work/link" name="Link.,.." />
-
-
-        <div>Some work page content</div>
-      </div>
+      <section id="work" className="container">
+        {this.renderContent()}
+      </section>
     )
   }
 }
+
+
+function mapStateToProps(state){
+  return {
+    data: state.work
+  };
+}
+
+
+export default connect(mapStateToProps)(Work);

@@ -70,6 +70,7 @@ h6{
 p{
   margin: 0 0 20px 0;
   padding: 0 20px;
+  line-height: 1.6;
 }
 
 
@@ -91,19 +92,6 @@ p{
   @media #{$md-screen}{
     flex-direction: row;
   }
-}
-
-.container-width{
-
-  @media #{$md-screen}{
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  @media #{$md-screen}{
-    width: 60%;
-  }
-
 }
 
 .container > div{
@@ -232,15 +220,23 @@ nav ul.open{
 }
 
 section{
-  height: auto;
-  @media #{$md-screen}{
-    height: 350px;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
 
 }
 
 #about{
+  justify-content: center;
+}
 
+#about > div{
+  flex: inherit;
+  @media #{$md-screen} {
+    width: 80%;
+  }
+  @media #{$lg-screen} {
+    width: 60%;
+  }
 }
 
 
