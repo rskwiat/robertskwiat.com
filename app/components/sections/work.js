@@ -3,23 +3,20 @@ import { Route, IndexRoute, Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import NavLink from '../partials/nav-link';
-
 class Work extends Component {
 
   renderContent(){
-    return this.props.data.map((data) => {      
+    return this.props.data.map((data) => {
       return(
-        <div>
-          <p key={data.id}>{data.blurb}</p>
+        <div key={data.id}>
+          <img src={data.placeholder} alt={data.blurb}/>
+          <p>{data.blurb}</p>
         </div>
       );
     });
   }
 
   render(){
-
-
     return (
       <section id="work" className="container">
         {this.renderContent()}
