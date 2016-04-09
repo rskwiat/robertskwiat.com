@@ -84,18 +84,23 @@ p{
 
 .container{
   width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flex();
+  @include flex-flow(row wrap);
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-direction(column);
   @media #{$md-screen}{
-    flex-direction: row;
+    @include flex-direction(row);
   }
 }
 
 .container > div{
   flex: 1 0 0;
+}
+
+img, object, video{
+  width: 100%;
+  max-width: 100%;
 }
 
 /*

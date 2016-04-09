@@ -241,17 +241,27 @@ p {
 
 .container {
   width: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-flex-direction: column;
   flex-direction: column; }
   @media (min-width: 768px) {
     .container {
+      -webkit-flex-direction: row;
       flex-direction: row; } }
 
 .container > div {
   flex: 1 0 0; }
+
+img, object, video {
+  width: 100%;
+  max-width: 100%; }
 
 /*
   Header Specific & Navigation Styling
