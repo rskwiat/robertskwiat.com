@@ -80,6 +80,11 @@ p{
 
 #app{
   position: relative;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  &.loaded{
+    opacity: 1;
+  }
 }
 
 .container{
@@ -94,7 +99,7 @@ p{
   }
 }
 
-.container > div{
+.flex-item{
   flex: 1 0 0;
 }
 
@@ -109,23 +114,25 @@ img, object, video{
 
 header{
   background: #ccc;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   background-size: contain;
+  @include flex();
+
+  @media #{$md-screen}{
+    height: 80vh;
+  }
 }
 
 #logo{
   background: url('../images/rs-logo.svg') no-repeat;
   background-size: contain;
   width: 300px;
-  height: 65px;
-  margin: 0;
+  margin: 0 0 0 5%;
   text-indent: -999em;
   display: inline-block;
+  align-self: center;
 
-  @media #{$md-screen}{
-    height: 406px;
-  }
 
 }
 
@@ -227,7 +234,6 @@ nav ul.open{
 section{
   margin-top: 20px;
   margin-bottom: 20px;
-
 }
 
 #about{
@@ -242,6 +248,22 @@ section{
   @media #{$lg-screen} {
     width: 60%;
   }
+}
+
+.gallery-item{
+  position: relative;
+  flex: 1 0 auto;
+  p{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    margin: 0 0 10px 0;
+  }
+}
+
+.gallery-item:hover p{
+  opacity: 1;
 }
 
 
@@ -314,4 +336,16 @@ footer{
 
 button[disabled], html input[disabled]{
 	cursor: not-allowed;
+}
+
+.error{
+  background: #95a5a6;
+  font-family: monospace;
+  height: 100vh;
+  width: 100vw;
+  @include flex();
+  @include flex-flow(row wrap);
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-direction(column);
 }
