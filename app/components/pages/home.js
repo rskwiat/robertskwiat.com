@@ -8,12 +8,18 @@ import Footer from '../sections/footer';
 
 
 export default class Home extends Component {
+
+  componentDidMount(){
+    var app = document.getElementById('app');
+    app.classList.add('loaded');
+  }
+
   render(){
     return (
       <div>
         <Header id="logo" name="robert skwiat"/>
-        <Work />
         <About />
+        <Work />
         <Contact />
         <Footer />
       </div>

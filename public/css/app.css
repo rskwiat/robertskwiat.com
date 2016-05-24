@@ -237,7 +237,11 @@ p {
   Grid & Layout
 */
 #app {
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out; }
+  #app.loaded {
+    opacity: 1; }
 
 .container {
   width: 100%;
@@ -256,7 +260,7 @@ p {
       -webkit-flex-direction: row;
       flex-direction: row; } }
 
-.container > div {
+.flex-item {
   flex: 1 0 0; }
 
 img, object, video {
@@ -268,21 +272,23 @@ img, object, video {
 */
 header {
   background: #ccc;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
-  background-size: contain; }
+  background-size: contain;
+  display: -webkit-flex;
+  display: flex; }
+  @media (min-width: 768px) {
+    header {
+      height: 80vh; } }
 
 #logo {
   background: url("../images/rs-logo.svg") no-repeat;
   background-size: contain;
   width: 300px;
-  height: 65px;
-  margin: 0;
+  margin: 0 0 0 5%;
   text-indent: -999em;
-  display: inline-block; }
-  @media (min-width: 768px) {
-    #logo {
-      height: 406px; } }
+  display: inline-block;
+  align-self: center; }
 
 nav ul {
   position: absolute;
@@ -373,6 +379,19 @@ section {
     #about > div {
       width: 60%; } }
 
+.gallery-item {
+  position: relative;
+  flex: 1 0 auto; }
+  .gallery-item p {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+    margin: 0 0 10px 0; }
+
+.gallery-item:hover p {
+  opacity: 1; }
+
 /*
   Contact Section
 */
@@ -430,3 +449,19 @@ footer {
 
 button[disabled], html input[disabled] {
   cursor: not-allowed; }
+
+.error {
+  background: #95a5a6;
+  font-family: monospace;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column; }

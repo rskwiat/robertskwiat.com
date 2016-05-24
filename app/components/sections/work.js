@@ -6,14 +6,25 @@ import { bindActionCreators } from 'redux';
 class Work extends Component {
 
   renderContent(){
-    return this.props.data.map((data) => {
+    var propData = this.props.data
+
+    if (propData == ''){
+      console.log('adele song...');
       return(
-        <div key={data.id}>
-          <img src={data.placeholder} alt={data.blurb}/>
-          <p>{data.blurb}</p>
+        <div className="">
+          <h2>Examples of work coming soon!</h2>
         </div>
-      );
-    });
+      )
+    } else {
+      return propData.map((data) => {
+          return(
+            <div className="flex-item gallery-item" key={data.id}>
+              <img src={data.icon} alt={data.name}/>
+              <p>{data.name}</p>
+            </div>
+          );
+      });
+    }
   }
 
   render(){

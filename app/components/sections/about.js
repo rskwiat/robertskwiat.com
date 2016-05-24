@@ -18,7 +18,7 @@ class About extends Component {
       <section id="about" className="container container-width">
         <div>
           {this.renderContent()}
-          <Button link="#" title="Download Resume"/>
+          <Button link="/resume" title="View Resume"/>
         </div>
       </section>
     )
