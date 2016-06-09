@@ -15,15 +15,20 @@
     "history": "^2.0.0",
     "hogan-express": "^0.5.2",
     "react": "^15.0.1",
+    "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.0.1",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
     "redux": "^3.3.1",
     "underscore": "^1.8.3"
   },
+  "babel":{
+    "presets": ["react", "es2015"]
+  },
   "scripts": {
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
     "dev": "npm run copy && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
+    "postdev": "open http://localhost:8080",
     "compile:js": "node ./node_modules/webpack/bin/webpack.js -p",
     "test": "NODE_ENV=test ./node_modules/.bin/webpack",
     "posttest": "open test/index.html",
@@ -37,10 +42,12 @@
   "devDependencies": {
     "babel-core": "^6.6.5",
     "babel-loader": "^6.2.4",
+    "jasmine-react-helpers": "^0.2.2",
     "node-jsx": "^0.13.3",
     "node-sass": "^3.4.2",
-    "static-server": "^2.0.1",
+    "react-addons-pure-render-mixin": "^15.1.0",
     "react-hot-loader": "1.3.0",
+    "static-server": "^2.0.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.0"
   },

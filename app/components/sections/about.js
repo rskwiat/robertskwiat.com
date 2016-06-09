@@ -25,11 +25,11 @@ class About extends Component {
   }
 }
 
-  function mapStateToProps(state){
-    return {
-      data: state.home
-    };
-  }
+function mapStateToProps(state){
+  return {
+    data: state.home
+  };
+}
 
 
 export default connect(mapStateToProps)(About);

@@ -260,6 +260,13 @@ p {
       -webkit-flex-direction: row;
       flex-direction: row; } }
 
+.resume {
+  margin: 0 auto;
+  max-width: 800px; }
+  .resume h1, .resume h2, .resume h3, .resume p {
+    margin: 0;
+    padding: 0; }
+
 .flex-item {
   flex: 1 0 0; }
 
