@@ -99,6 +99,16 @@ p{
   }
 }
 
+.resume{
+  margin: 0 auto;
+  max-width: 800px;
+
+  h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .flex-item{
   flex: 1 0 0;
 }
