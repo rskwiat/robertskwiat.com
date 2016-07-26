@@ -11,7 +11,8 @@ import Education from '../partials/resume/education.js';
 export default class Resume extends Component {
 
   componentDidMount(){
-    loader();
+    var app = document.getElementById('app');
+    app.classList.add('loaded');  
   }
 
   render(){
@@ -21,6 +22,7 @@ export default class Resume extends Component {
         <Expertise />
         <Experience />
         <Education />
+        <Button link="/resumeDownload.pdf" title="Download Resume" />
         <Button link="/" title="Return Home" />
       </div>
     )

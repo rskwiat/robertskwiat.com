@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import loader from '../../functions/loader.js';
 
 export default class NoMatch extends Component {
+
+  componentDidMount(){
+    loader();
+  }
+
+
   render(){
     return (
       <div className="error">

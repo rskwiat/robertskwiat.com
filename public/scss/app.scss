@@ -11,6 +11,7 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
 }
 
 a, a:focus, a:hover{
@@ -18,15 +19,11 @@ a, a:focus, a:hover{
 }
 
 .browserupgrade {
-	margin: 0.2em 0;
+	margin: 0.2rem 0;
 	background: yellow;
 	color: #000;
-	font-size: 1.2em;
-	padding: 0.2em 0;
-	text-align: center;
-}
-
-.text-center{
+	font-size: 1.2rem;
+	padding: 0.2rem 0;
 	text-align: center;
 }
 
@@ -34,12 +31,9 @@ a, a:focus, a:hover{
   Typography
 */
 
-h1, h2, h3{
-  margin: 0 0 20px 0;
-}
-
-h4,h5,h6{
-  margin: 0;
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+  margin: 0 0 1.25rem 0;
 }
 
 
@@ -68,8 +62,8 @@ h6{
 }
 
 p{
-  margin: 0 0 20px 0;
-  padding: 0 20px;
+  margin: 0 0 1.250rem 0;
+  padding: 0 1.250rem;
   line-height: 1.6;
 }
 
@@ -81,7 +75,7 @@ p{
 #app{
   position: relative;
   opacity: 0;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 450ms ease-in-out;
   &.loaded{
     opacity: 1;
   }
@@ -99,17 +93,11 @@ p{
   }
 }
 
-.resume{
-  margin: 0 auto;
-  max-width: 800px;
-
-  h1, h2, h3, p{
-    margin: 0;
-    padding: 0;
-  }
+.container-column{
+  @include flex-direction(column);
 }
 
-.flex-item{
+.inner{
   flex: 1 0 0;
 }
 
@@ -122,128 +110,27 @@ img, object, video{
   Header Specific & Navigation Styling
 */
 
-header{
-  background: #ccc;
-  height: 50vh;
-  width: 100%;
+#profile-img{
+  background: url('../images/header-background.png') top right no-repeat;
   background-size: contain;
-  @include flex();
-
-  @media #{$md-screen}{
-    height: 80vh;
-  }
+  height: 300px;
+  width: 300px;
+  margin: 2.500rem 0;
 }
 
 #logo{
   background: url('../images/rs-logo.svg') no-repeat;
   background-size: contain;
   width: 300px;
-  margin: 0 0 0 5%;
+  margin: 0 0 0 0;
   text-indent: -999em;
   display: inline-block;
   align-self: center;
 
-
-}
-
-
-nav{
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // z-index: 25;
-}
-
-nav ul{
-  position: absolute;
-  top: 50px;
-  list-style: none;
-  opacity: 0;
-  padding: 0 20px;
-  margin: 0;
-  width: 100%;
-  background: rgba(0,0,0,.75);
-  transform: translateX(-500px);
-  transition: all .5s ease;
-  @media #{$md-screen}{
-    width: 300px;
-  }
-  li{
-    text-align: right;
-    border-bottom: 5px solid rgba(0,0,0, .5);
-    &:last-child{
-      border-bottom: 0;
-    }
-    a{
-      padding: 20px 0;
-      display: inline-block;
-      width: 100%;
-      color: #fff;
-      font-size: 24px;
-    }
-  }
-}
-
-nav ul.open{
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-.menu-toggle {
-  position: fixed;
-	width: 44px;
-	height: 44px;
-	float: right;
-	top: 15px;
-	right: 15px;
-	z-index: 15;
-  background: $brand;
-  border-radius: 360px;
-  box-shadow: 0px 3px 3px rgba(0,0,0,.3);
-}
-
-.menu-toggle .bar {
-	background-color: white;
-	display: block;
-	width: 20px;
-	height: 2px;
-	border-radius: 100px;
-	position: absolute;
-	top: 22px;
-	right: 12px;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-}
-
-.menu-toggle .bar:first-child {
-	-webkit-transform: translateY(-6px);
-	transform: translateY(-6px);
-}
-
-.menu-toggle .bar:nth-child(3) {
-	-webkit-transform: translateY(6px);
-	transform: translateY(6px);
-}
-
-.menu-toggle.x .bar:nth-child(2) {
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.menu-toggle.x .bar:nth-child(3) {
-  opacity: 0;
-}
-
-.menu-toggle.x .bar:first-child {
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
 }
 
 section{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 2.500rem 0;
 }
 
 #about{
@@ -260,18 +147,69 @@ section{
   }
 }
 
-.gallery-item{
-  position: relative;
-  flex: 1 0 auto;
-  p{
-    position: absolute;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
-    margin: 0 0 10px 0;
-  }
+#gfg{
+  background: #00b4a7 url('../images/work-gfg.jpg') right no-repeat;
+  background-size: contain;
+}
+#ludens{
+  background: #6da958 url('../images/work-ludens.jpg') right no-repeat;
+  background-size: contain;
+}
+#paneraSummerSalad{
+  background: url('../images/work-panera.jpg') top center no-repeat;
+  background-size: cover;
+  // background: #d35400;
+}
+#adBuilder{
+  background: #212831 url('../images/work-demo-builder.jpg') right no-repeat;
+  background-size: contain;
 }
 
+.gallery-item{
+  position: relative;
+  flex: 1 0 100%;
+  width: 100%;
+  height: 350px;
+
+  @media #{$md-screen} {
+    flex: 1 0 50%;
+    width: 50%;
+  }
+
+  @include flex();
+  @include flex-flow(column wrap);
+  @include justify-content(center);
+  @include align-items(left);
+
+  p, h4{
+
+    z-index: 5;
+    opacity: 0;
+    color: #FFF;
+    opacity: 0;
+    padding: 0 2.500rem;
+    transition: opacity 450ms ease-in-out;
+  }
+
+  p{
+    margin: 0;
+  }
+
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 450ms ease-in-out;
+}
+
+.gallery-item:hover .overlay,
+.gallery-item:hover h4,
 .gallery-item:hover p{
   opacity: 1;
 }
@@ -286,11 +224,13 @@ section{
 }
 
 .icon{
-  margin: 10px 15px;
   color: $gray;
   font-size: 2.25rem;
 }
 
+.icon-middle{
+  margin: 0rem 1.25rem;
+}
 
 
 /*
@@ -299,7 +239,7 @@ section{
 
 footer{
   background: #ecf0f1;
-  padding: 40px 0;
+  padding: 2.500rem 0;
 }
 
 .copyright{
@@ -331,6 +271,9 @@ footer{
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
 	transition: all .25s linear;
+  @media print {
+    display: none;
+  }
 }
 
 .btn-inverse{
@@ -358,4 +301,48 @@ button[disabled], html input[disabled]{
   @include justify-content(center);
   @include align-items(center);
   @include flex-direction(column);
+}
+
+
+
+.resume{
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 1.25rem;
+
+  h1, h2, p{
+    margin: 0;
+    padding: 0;
+  }
+
+  &> p{
+    margin: 1.25rem 0;
+  }
+
+  h2, h3, h4{
+    margin: 1.25rem 0;
+  }
+
+}
+
+@media print {
+
+   h2, h3, h4, h5, h6, p, ul li{
+    font-size: 9pt;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  h1{
+    font-size: 13pt;
+    padding: 0 0 20pt 0;
+  }
+
+  .hide-for-print{
+    display: none;
+  }
+
+
+
 }

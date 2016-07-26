@@ -15,7 +15,7 @@ class About extends Component {
 
   render(){
     return (
-      <section id="about" className="container container-width">
+      <section id="about" className="container">
         <div>
           {this.renderContent()}
           <Button link="/resume" title="View Resume"/>
