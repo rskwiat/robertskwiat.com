@@ -12,10 +12,6 @@ import createMemoryHistory from 'history/lib/createMemoryHistory';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { Router, match, RouterContext, RoutingContext, IndexRoute } from 'react-router';
 import routes from './app/routes/routes';
-import reducers from './app/reducers';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-
 
 const app = express();
 const port = 4500;
