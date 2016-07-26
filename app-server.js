@@ -1,37 +1,52 @@
 // server.js
 
 import express from 'express';
+import favicon from 'serve-favicon';
 import path from 'path';
 import fs from 'fs';
 import ejs from 'ejs';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
+import createMemoryHistory from 'history/lib/createMemoryHistory';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
-import { Router, match, RouterContext } from 'react-router';
-import Location from 'history/lib/createLocation';
-import routes from './app/routes';
+import { Router, match, RouterContext, RoutingContext, IndexRoute } from 'react-router';
+import routes from './app/routes/routes';
+import reducers from './app/reducers';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+
 
 const app = express();
-const port = 4444;
+const port = 4500;
 
-app.use(express.static('public'));
+app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.get('*', function(req, res) {
+
+
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    var content = ReactDOMServer.renderToString(<RouterContext {...renderProps}/>);
-    if (error) {
-      res.status(500).send(error.message)
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    } else if (renderProps) {
+
+    var content = ReactDOMServer.renderToStaticMarkup(<RouterContext {...renderProps}/>);
+
+    // console.log(content);
       res.render('index.ejs', {html: content});
-    } else {
-      res.render('index.ejs', {html: content});
-    }
-  })
+
+    // if (error) {
+    //   res.status(500).send(error.message)
+    // } else if (redirectLocation) {
+    //   res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+    // } else {
+    // }
+  });
+
+
 });
 
 app.get('/robots.txt', function (req, res) {
@@ -45,4 +60,5 @@ app.get('/humans.txt', function (req, res) {
 });
 
 app.listen(port);
-console.log('Server is Up and Running at Port:' + port);
+
+console.log(`Server is up and running at http://localhost:${port}`);

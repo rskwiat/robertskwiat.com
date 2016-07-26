@@ -3,13 +3,17 @@ import { Route, IndexRoute, Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 class Work extends Component {
 
   renderContent(){
+
     var propData = this.props.data
 
     if (propData == ''){
-      console.log('adele song...');
       return(
         <div className="">
           <h2>Examples of work coming soon!</h2>
@@ -18,9 +22,10 @@ class Work extends Component {
     } else {
       return propData.map((data) => {
           return(
-            <div className="flex-item gallery-item" key={data.id}>
-              <img src={data.icon} alt={data.name}/>
-              <p>{data.name}</p>
+            <div className="inner gallery-item" id={data.id} key={data.num}>
+              <h4>{data.name}</h4>
+              <p>{data.company}</p>
+              <div className="overlay"></div>
             </div>
           );
       });

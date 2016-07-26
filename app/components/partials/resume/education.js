@@ -14,7 +14,7 @@ export default class Education extends Component {
             <li>Jekyll, Grunt, Gulp, Wordpress, mySQL, nGinx, Python, Node, ExpressJS, Vagrant, OpenCart</li>
           </ul>
 
-        <p>*Fun fact - this site is built in React &amp; Express!</p>
+        <p className="hide-for-print">*Fun fact - this site is built in React &amp; Express!</p>
       </div>
     )
   }

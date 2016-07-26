@@ -9,7 +9,6 @@ import loader from '../../functions/loader.js'
 
 
 export default class Home extends Component {
-
   componentDidMount(){
     loader();
   }

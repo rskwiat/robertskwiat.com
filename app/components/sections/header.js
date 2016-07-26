@@ -3,7 +3,8 @@ import React, { Component} from 'react';
 export default class Header extends Component {
   render(){
     return (
-        <header>
+        <header className="container container-column">
+          <div id="profile-img"></div>
           <h1 id={this.props.id}>{this.props.name}</h1>
         </header>
     )
