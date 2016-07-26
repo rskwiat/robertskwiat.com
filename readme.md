@@ -49,6 +49,6 @@ All data handled currently is static. No need for actions but using the Redux pa
 React Router handles the client side rendering. All data is passed to
 
 
-//???
+## Todos
 
-Could not find "store" in either the context or props of "Connect(About)". Either wrap the root component in a <Provider>, or explicitly pass "store" as a prop to "Connect(About)".
+Add Redux back in - fix server side rendering

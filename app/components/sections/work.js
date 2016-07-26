@@ -1,52 +1,19 @@
 import React, { Component } from 'react';
 import { Route, IndexRoute, Link } from 'react-router';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+import ProjectTile from '../partials/projectTile.js'
 
-class Work extends Component {
-
-  renderContent(){
-
-    var propData = this.props.data
-
-    if (propData == ''){
-      return(
-        <div className="">
-          <h2>Examples of work coming soon!</h2>
-        </div>
-      )
-    } else {
-      return propData.map((data) => {
-          return(
-            <div className="inner gallery-item" id={data.id} key={data.num}>
-              <h4>{data.name}</h4>
-              <p>{data.company}</p>
-              <div className="overlay"></div>
-            </div>
-          );
-      });
-    }
-  }
+export default class Work extends Component {
 
   render(){
     return (
       <section id="work" className="container">
-        {this.renderContent()}
+        <ProjectTile id="gfg" name="Goods for Good Landing Page" company="Ten Twenty Five" />
+        <ProjectTile id="ludens" name="Ludens Website" company="KBS+ / Spies & Assassins" />
+        <ProjectTile id="paneraSummerSalad" name="Panera Summer Salad" company="Mediabrix" />
+        <ProjectTile id="adBuilder" name="Mediabrix Demo Builder" company="Mediabrix" />
       </section>
     )
   }
 }
 
-
-function mapStateToProps(state){
-  return {
-    data: state.work
-  };
-}
-
-
-export default connect(mapStateToProps)(Work);
