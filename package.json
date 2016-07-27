@@ -30,17 +30,21 @@
     ]
   },
   "scripts": {
+    "clean": "rm -rf public/index.html & rm -rf dist",
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
     "dev": "npm run copy && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback & npm run compile:sass:dev",
     "postdev": "open http://localhost:8080",
     "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p",
+    "compile:js:server": "NODE_ENV=production nodejs ./node_modules/webpack/bin/webpack.js -p",
     "uglify": "uglifyjs --compress -- ./public/dist/bundle.js -- output bundle.min.js",
     "test": "NODE_ENV=test ./node_modules/.bin/webpack",
     "posttest": "open test/index.html",
     "compile:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
     "compile:sass:production": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
+    "compile:sass:server": "nodejs ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
     "production": "npm run compile:sass:production && npm run compile:js",
-    "server": "forever start --minUptime 1000 --spinSleepTime 1000 app.js"
+    "server": "forever start --minUptime 1000 --spinSleepTime 1000 app.js",
+    "server:production":"npm run compile:sass:server && npm run compile:js:server"
   },
   "author": "",
   "license": "ISC",
