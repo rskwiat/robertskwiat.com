@@ -83,6 +83,7 @@ p{
 
 .container{
   width: 100%;
+  display: block;
   @include flex();
   @include flex-flow(row wrap);
   @include justify-content(center);
@@ -98,7 +99,7 @@ p{
 }
 
 .inner{
-  flex: 1 0 0;
+  // flex: 1 0 0;
 }
 
 img, object, video{
@@ -167,7 +168,7 @@ section{
 
 .gallery-item{
   position: relative;
-  flex: 1 0 100%;
+  // flex: 1 0 100%;
   width: 100%;
   height: 350px;
 
@@ -244,8 +245,10 @@ footer{
 
 .copyright{
   margin: 0;
-  flex: 1 100%;
   text-align: center;
+  @media #{$md-screen}{
+    flex: 1 100%;
+  }
 }
 
 /*

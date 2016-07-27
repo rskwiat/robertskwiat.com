@@ -23,7 +23,6 @@ $xl-screen: "(min-width: 1200px)";
 }
 
 @mixin flex(){
-  display: -webkit-flex;
   display: flex;
 }
 
