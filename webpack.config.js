@@ -15,7 +15,7 @@ if(process.env.NODE_ENV === 'test'){
   var entry = './app/app.js';
   var path =  __dirname;
   var publicPath = '/';
-  var filename = './dist/bundle.js';
+  var filename = './js/dist/bundle.js';
 }
 
 module.exports = {

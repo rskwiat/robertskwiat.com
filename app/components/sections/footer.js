@@ -6,7 +6,7 @@ import Copyright from '../partials/copyright';
 export default class Footer extends Component {
   render(){
     return (
-      <footer>
+      <footer role="contentinfo">
         <div className="container">
           <Copyright />
         </div>

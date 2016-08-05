@@ -32,11 +32,10 @@
   "scripts": {
     "clean": "rm -rf public/index.html & rm -rf dist",
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
-    "dev": "npm run copy && node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback & npm run compile:sass:dev",
+    "dev": "npm run copy && npm run compile:sass:dev & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
     "postdev": "open http://localhost:8080",
     "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p",
-    "compile:js:server": "NODE_ENV=production nodejs ./node_modules/webpack/bin/webpack.js -p",
-    "uglify": "uglifyjs --compress -- ./public/dist/bundle.js -- output bundle.min.js",
+    "uglify": "uglifyjs --compress -- ./public/js/dist/bundle.js > bundle.min.js",
     "test": "NODE_ENV=test ./node_modules/.bin/webpack",
     "posttest": "open test/index.html",
     "compile:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
