@@ -22,27 +22,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.get('*', function(req, res) {
-
-
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-
     var content = ReactDOMServer.renderToStaticMarkup(<RouterContext {...renderProps}/>);
-
-    // console.log(content);
       res.render('index.ejs', {html: content});
-
-    // if (error) {
-    //   res.status(500).send(error.message)
-    // } else if (redirectLocation) {
-    //   res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    // } else {
-    // }
   });
-
-
 });
 
 app.get('/robots.txt', function (req, res) {
