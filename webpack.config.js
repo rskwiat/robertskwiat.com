@@ -1,11 +1,6 @@
 var webpack = require('webpack');
 var path = require("path");
 
-
-var Dashboard = require('webpack-dashboard');
-var DashboardPlugin = require('webpack-dashboard/plugin');
-var dashboard = new Dashboard();
-
 if(process.env.NODE_ENV === 'test'){
   var entry = './test/testSpecs.js';
   var publicPath = '/test';
@@ -57,7 +52,6 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-    contentBase: './public',
-    quiet: true
+    contentBase: './public'
   }
 };
