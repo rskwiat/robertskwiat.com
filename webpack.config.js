@@ -1,5 +1,10 @@
 var webpack = require('webpack');
+var path = require("path");
 
+
+var Dashboard = require('webpack-dashboard');
+var DashboardPlugin = require('webpack-dashboard/plugin');
+var dashboard = new Dashboard();
 
 if(process.env.NODE_ENV === 'test'){
   var entry = './test/testSpecs.js';
@@ -15,7 +20,7 @@ if(process.env.NODE_ENV === 'test'){
   var entry = './app/app.js';
   var path =  __dirname;
   var publicPath = '/';
-  var filename = './js/dist/bundle.js';
+  var filename = './dist/bundle.js';
 }
 
 module.exports = {
@@ -52,6 +57,7 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
-    contentBase: './public'
+    contentBase: './public',
+    quiet: true
   }
 };

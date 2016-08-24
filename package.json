@@ -33,7 +33,6 @@
     "clean": "rm -rf public/index.html & rm -rf dist",
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
     "dev": "npm run copy && npm run compile:sass:dev & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
-    "postdev": "open http://localhost:8080",
     "compile:js": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js -p",
     "uglify": "uglifyjs --compress -- ./public/js/dist/bundle.js > bundle.min.js",
     "test": "NODE_ENV=test ./node_modules/.bin/webpack",
@@ -56,6 +55,7 @@
     "static-server": "^2.0.1",
     "uglify-js": "^2.7.0",
     "webpack": "^1.12.14",
+    "webpack-dashboard": "^0.1.7",
     "webpack-dev-server": "^1.14.0"
   },
   "repository": {
