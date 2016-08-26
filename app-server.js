@@ -40,5 +40,3 @@ app.get('/humans.txt', function (req, res) {
 });
 
 app.listen(port);
-
-console.log(`Server is up and running at http://localhost:${port}`);

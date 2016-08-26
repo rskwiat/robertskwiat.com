@@ -1,17 +1,10 @@
-var webpack = require('webpack');
 var path = require("path");
+var webpack = require('webpack');
 
-if(process.env.NODE_ENV === 'test'){
-  var entry = './test/testSpecs.js';
-  var publicPath = '/test';
-  var path = './test';
-  var filename = 'spec.js';
-} else {
-  var entry = './app/app.js';
-  var path =  __dirname;
-  var publicPath = '/';
-  var filename = './dist/bundle.js';
-}
+var entry = './app/app.js';
+var path =  __dirname;
+var publicPath = '/';
+var filename = './public/dist/bundle.js';
 
 module.exports = {
   entry: [
@@ -44,9 +37,5 @@ module.exports = {
         warnings: true
       }
     })
-  ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './public'
-  }
+  ]
 };
