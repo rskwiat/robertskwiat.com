@@ -23,7 +23,7 @@ export default class About extends Component {
 
   render(){
     return (
-      <section id="about" className="container" role="main">
+      <section id="about" className="container container-about" role="main">
         <div>
           {this.renderContent()}
           <Button link="/resume" title="View Resume"/>
