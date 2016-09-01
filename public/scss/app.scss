@@ -1,25 +1,13 @@
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+@import "functions";
+@import "base";
 
 .debug{
   border: 1px solid red !important;
 }
 
-.cls-1{fill:#fff;}
-
-
-
-@import "functions";
-@import "normalize";
-
 body{
-  font-family: "-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif";
+  font-family: sans-serif;
   font-size: 16px;
-}
-
-a, a:focus, a:hover{
-	text-decoration: none;
 }
 
 .browserupgrade {
@@ -34,36 +22,6 @@ a, a:focus, a:hover{
 /*
   Typography
 */
-
-h1, h2, h3, h4, h5, h6{
-  font-weight: normal;
-  margin: 0 0 1.25rem 0;
-}
-
-
-h1{
-  font-size: 2.250rem;
-}
-
-h2{
-  font-size: 2.000rem;
-}
-
-h3{
-  font-size: 1.750rem;
-}
-
-h4{
-  font-size: 1.500rem;
-}
-
-h5{
-  font-size: 1.250rem;
-}
-
-h6{
-  font-size: 1rem;
-}
 
 p{
   margin: 0 0 1.250rem 0;
@@ -102,10 +60,6 @@ p{
   @include flex-direction(column);
 }
 
-.inner{
-  // flex: 1 0 0;
-}
-
 img, object, video{
   width: 100%;
   max-width: 100%;
@@ -115,34 +69,39 @@ img, object, video{
   Header Specific & Navigation Styling
 */
 
-#profile-img{
-  background: url('../images/header-background.png') top right no-repeat;
-  background-size: contain;
+.profile{
   height: 300px;
   width: 300px;
   margin: 2.500rem 0;
 }
 
-#logo{
-  background: url('../images/rs-logo.svg') no-repeat;
+.profile-img{
+  background: url('../images/header-background.png') top right no-repeat;
   background-size: contain;
+}
+
+.logo{
   width: 300px;
   margin: 0 0 0 0;
   text-indent: -999em;
   display: inline-block;
   align-self: center;
+}
 
+.logo-robertskwiat{
+  background: url('../images/rs-logo.svg') no-repeat;
+  background-size: contain;
 }
 
 section{
   margin: 2.500rem 0;
 }
 
-#about{
+.container-about{
   justify-content: center;
 }
 
-#about > div{
+.container-about > div{
   flex: inherit;
   @media #{$md-screen} {
     width: 80%;
@@ -152,27 +111,27 @@ section{
   }
 }
 
-#gfg{
+.gallery-item-gfg{
   background: #00b4a7 url('../images/work-gfg.jpg') right no-repeat;
   background-size: contain;
 }
-#ludens{
+
+.gallery-item-ludens{
   background: #6da958 url('../images/work-ludens.jpg') right no-repeat;
   background-size: contain;
 }
-#paneraSummerSalad{
+.gallery-item-paneraSummerSalad{
   background: url('../images/work-panera.jpg') top center no-repeat;
   background-size: cover;
   // background: #d35400;
 }
-#adBuilder{
+.gallery-item-adBuilder{
   background: #212831 url('../images/work-demo-builder.jpg') right no-repeat;
   background-size: contain;
 }
 
 .gallery-item{
   position: relative;
-  // flex: 1 0 100%;
   width: 100%;
   height: 350px;
 
@@ -187,7 +146,6 @@ section{
   @include align-items(left);
 
   p, h4{
-
     z-index: 5;
     opacity: 0;
     color: #FFF;
@@ -224,7 +182,7 @@ section{
   Contact Section
 */
 
-#contact{
+.container-contact{
   text-align: center;
 }
 
@@ -309,8 +267,6 @@ button[disabled], html input[disabled]{
   @include align-items(center);
   @include flex-direction(column);
 }
-
-
 
 .resume{
   margin: 0 auto;

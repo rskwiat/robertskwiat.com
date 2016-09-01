@@ -36,7 +36,8 @@
     "compile:js": "node ./node_modules/webpack/bin/webpack.js --config webpack.production.js -p",
     "test": "NODE_ENV=test ./node_modules/.bin/webpack",
     "posttest": "open test/index.html",
-    "compile:sass:dev": "node ./node_modules/node-sass/bin/node-sass --output-style compressed  public/scss/app.scss public/css/app.css",
+    "compile:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
+    "compile:sass:production": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
     "production": "npm run compile:sass:production && npm run compile:js",
     "start": "forever start --minUptime 1000 --spinSleepTime 1000 app.js"
   },

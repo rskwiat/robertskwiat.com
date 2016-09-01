@@ -16,7 +16,7 @@ export default class Home extends Component {
   render(){
     return (
       <div>
-        <Header id="logo" name="robert skwiat"/>
+        <Header id="logo logo-robertskwiat" name="robert skwiat"/>
         <About />
         <Work />
         <Contact />
