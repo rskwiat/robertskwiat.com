@@ -11,8 +11,7 @@ import Education from '../partials/resume/education.js';
 export default class Resume extends Component {
 
   componentDidMount(){
-    var app = document.getElementById('app');
-    app.classList.add('loaded');  
+    loader();
   }
 
   render(){
