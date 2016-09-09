@@ -5,7 +5,7 @@ import Work from '../sections/work';
 import About from '../sections/about';
 import Contact from '../sections/contact';
 import Footer from '../sections/footer';
-import loader from '../../functions/loader.js'
+import loader from '../../functions/loader';
 
 
 export default class Home extends Component {

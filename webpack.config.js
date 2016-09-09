@@ -1,6 +1,10 @@
 var webpack = require('webpack');
 var path = require("path");
 
+var Dashboard = require('webpack-dashboard');
+var DashboardPlugin = require('webpack-dashboard/plugin');
+var dashboard = new Dashboard();
+
 if(process.env.NODE_ENV === 'test'){
   var entry = './test/testSpecs.js';
   var publicPath = '/test';
@@ -34,6 +38,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   plugins:[
+    new DashboardPlugin(dashboard.setData),
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
@@ -47,6 +52,7 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true,
+    quiet: true,
     contentBase: './public'
   }
 };

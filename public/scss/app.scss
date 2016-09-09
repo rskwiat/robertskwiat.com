@@ -273,6 +273,14 @@ button[disabled], html input[disabled]{
   max-width: 800px;
   padding: 0 1.25rem;
 
+  ul{
+    padding: 0 0 0 2.000rem;
+  }
+
+  ul li{
+    margin: 1rem 0;
+  }
+
   h1, h2, p{
     margin: 0;
     padding: 0;
@@ -280,6 +288,7 @@ button[disabled], html input[disabled]{
 
   &> p{
     margin: 1.25rem 0;
+    line-height: 1.8;
   }
 
   h2, h3, h4{
