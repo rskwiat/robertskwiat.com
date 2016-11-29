@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import seniorKBS from '../../../../content/seniorKBS';
-import kbsdev from '../../../../content/kbsdev';
+
 
 export default class KBS extends Component {
 

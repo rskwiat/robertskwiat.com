@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import KeanU from '../../../../content/kean';
 
 export default class Kean extends Component {
 

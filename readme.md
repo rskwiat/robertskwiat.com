@@ -1,4 +1,6 @@
-# Personal Website 2016 Edition
+# Personal Website 2016.2 Edition
+
+Refactoring, code + cleanup with adding in and removing features such as eslint.
 
 ## Isomorphic React + Express
 

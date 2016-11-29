@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
 
-import contentExpertise from '../../../content/expertise';
+class Expertise extends Component {
 
-export default class Expertise extends Component {
-
-  renderExpertise(){
-    return contentExpertise.map((data) => {
-      return(
-        <li key={data.key}>{data.copy}</li>
-      );
-    });
-  }
-
-  render(){
+  render() {
     return (
       <div>
         <h3>Areas of Expertise:</h3>
         <ul>
-          {this.renderExpertise()}
         </ul>
       </div>
-    )
+    );
   }
 }
+
+export default Expertise;

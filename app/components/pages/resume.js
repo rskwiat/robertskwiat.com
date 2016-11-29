@@ -10,11 +10,11 @@ import Education from '../partials/resume/education.js';
 
 export default class Resume extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     loader();
   }
 
-  render(){
+  render() {
     return (
       <div className="resume" role="document">
         <Career />
@@ -23,6 +23,6 @@ export default class Resume extends Component {
         <Education />
         <Button link="/" title="Return Home" />
       </div>
-    )
+    );
   }
 }

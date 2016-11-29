@@ -1,30 +1,21 @@
-var webpack = require('webpack');
-var path = require("path");
+const webpack = require('webpack');
+const Dashboard = require('webpack-dashboard');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
-var Dashboard = require('webpack-dashboard');
-var DashboardPlugin = require('webpack-dashboard/plugin');
-var dashboard = new Dashboard();
-
-if(process.env.NODE_ENV === 'test'){
-  var entry = './test/testSpecs.js';
-  var publicPath = '/test';
-  var path = './test';
-  var filename = 'spec.js';
-} else {
-  var entry = './app/app.js';
-  var path =  __dirname;
-  var publicPath = '/';
-  var filename = './dist/bundle.js';
-}
+const dashboard = new Dashboard();
+const entry = './app/app.js';
+const path = __dirname;
+const publicPath = '/';
+const filename = './dist/bundle.js';
 
 module.exports = {
   entry: [
     entry
   ],
   output: {
-    path: path,
-    publicPath: publicPath,
-    filename: filename
+    path,
+    publicPath,
+    filename
   },
   module: {
     loaders: [
@@ -37,18 +28,8 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  plugins:[
-    new DashboardPlugin(dashboard.setData),
-    new webpack.DefinePlugin({
-      'process.env':{
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress:{
-        warnings: true
-      }
-    })
+  plugins: [
+    new DashboardPlugin(dashboard.setData)
   ],
   devServer: {
     historyApiFallback: true,

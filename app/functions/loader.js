@@ -1,4 +1,4 @@
-module.exports = function(){
-  var app = document.getElementById('app');
+module.exports = function () {
+  const app = document.getElementById('app');
   app.classList.add('loaded');
-}
+};

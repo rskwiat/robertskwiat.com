@@ -8,12 +8,13 @@
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.5.2",
+    "babel-core": "^6.6.5",
+    "babel-loader": "^6.2.4",
     "body-parser": "^1.14.1",
     "cookie-parser": "^1.4.0",
     "ejs": "^2.4.1",
     "express": "^4.13.3",
     "history": "^3.0.0",
-    "hogan-express": "^0.5.2",
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.0.1",
@@ -21,7 +22,15 @@
     "react-router": "^2.0.0",
     "redux": "^3.3.1",
     "serve-favicon": "^2.3.0",
-    "underscore": "^1.8.3"
+    "clean-css": "^3.4.19",
+    "node-sass": "^3.4.2",
+    "react-addons-pure-render-mixin": "^15.1.0",
+    "react-hot-loader": "1.3.0",
+    "static-server": "^2.0.1",
+    "uglify-js": "^2.7.0",
+    "webpack": "^1.12.14",
+    "webpack-dashboard": "^0.1.7",
+    "webpack-dev-server": "^1.14.0"
   },
   "babel": {
     "presets": [
@@ -33,30 +42,18 @@
     "clean": "rm -rf public/index.html & rm -rf dist",
     "copy": "rm -rf public/index.html && cp views/index.ejs public/index.html",
     "dev": "npm run copy && npm run compile:sass:dev & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --devtool inline-source-map --history-api-fallback",
-    "compile:js": "node ./node_modules/webpack/bin/webpack.js --config webpack.production.js -p",
-    "test": "NODE_ENV=test ./node_modules/.bin/webpack",
-    "posttest": "open test/index.html",
     "compile:sass:dev": "node ./node_modules/node-sass/bin/node-sass -w public/scss/app.scss public/css/app.css",
     "compile:sass:production": "node ./node_modules/node-sass/bin/node-sass --output-style compressed public/scss/app.scss public/css/app.css",
-    "production": "npm run compile:sass:production && npm run compile:js",
-    "start": "forever start --minUptime 1000 --spinSleepTime 1000 app.js"
+    "compile:js:production": "node ./node_modules/webpack/bin/webpack.js --config webpack.production.js -p",
+    "compile:production": "npm run clean & npm run compile:sass:production && npm run compile:js:production",
+    "production:dev": "nodemon app.js",
+    "production:start": "forever start --minUptime 1000 --spinSleepTime 1000 app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.6.5",
-    "babel-loader": "^6.2.4",
-    "clean-css": "^3.4.19",
-    "jasmine-react-helpers": "^0.2.2",
-    "node-jsx": "^0.13.3",
-    "node-sass": "^3.4.2",
-    "react-addons-pure-render-mixin": "^15.1.0",
-    "react-hot-loader": "1.3.0",
-    "static-server": "^2.0.1",
-    "uglify-js": "^2.7.0",
-    "webpack": "^1.12.14",
-    "webpack-dashboard": "^0.1.7",
-    "webpack-dev-server": "^1.14.0"
+    "eslint-config-rallycoding": "^3.1.0",
+    "eslint-rallycoding": "^1.2.0"
   },
   "repository": {
     "type": "git",

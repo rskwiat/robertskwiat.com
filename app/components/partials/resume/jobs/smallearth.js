@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import smallearth from '../../../../content/smallearth';
 
 export default class SmallEarth extends Component {
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class LinkedIn extends Component {
+class LinkedIn extends Component {
   render(){
     return (
       <a href={this.props.link} className="icon-middle">
@@ -9,3 +9,5 @@ export default class LinkedIn extends Component {
     )
   }
 }
+
+export { LinkedIn };

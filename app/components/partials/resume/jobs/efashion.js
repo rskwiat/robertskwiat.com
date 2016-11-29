@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import contentEFS from '../../../../content/efs';
 
 export default class Efashion extends Component {
 

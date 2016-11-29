@@ -1,19 +1,18 @@
-var path = require("path");
-var webpack = require('webpack');
+const webpack = require('webpack');
 
-var entry = './app/app.js';
-var path =  __dirname;
-var publicPath = '/';
-var filename = './public/dist/bundle.js';
+const entry = './app/app.js';
+const path = __dirname;
+const publicPath = '/';
+const filename = './public/dist/bundle.js';
 
 module.exports = {
   entry: [
     entry
   ],
   output: {
-    path: path,
-    publicPath: publicPath,
-    filename: filename
+    path,
+    publicPath,
+    filename
   },
   module: {
     loaders: [
@@ -26,14 +25,14 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  plugins:[
+  plugins: [
     new webpack.DefinePlugin({
-      'process.env':{
-        'NODE_ENV': JSON.stringify('production')
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress:{
+      compress: {
         warnings: true
       }
     })

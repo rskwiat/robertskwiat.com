@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Route, IndexRoute, Link } from 'react-router';
-import loader from '../../functions/loader.js'
+import loader from '../../functions/loader.js';
 
 export default class Nav extends Component {
 
@@ -8,11 +7,11 @@ export default class Nav extends Component {
     loader();
   }
 
-  render(){
+  render() {
     return (
       <div>
         { this.props.children }
       </div>
-    )
+    );
   }
 }

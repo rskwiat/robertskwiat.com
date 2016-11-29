@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import mediabrix from '../../../../content/mediabrix';
 
 export default class Mediabrix extends Component {
 

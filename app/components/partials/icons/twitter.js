@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Twitter extends Component {
+class Twitter extends Component {
   render(){
     return (
       <a href={this.props.link}>
@@ -9,3 +9,5 @@ export default class Twitter extends Component {
     )
   }
 }
+
+export { Twitter };
