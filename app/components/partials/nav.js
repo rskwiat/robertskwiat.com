@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import loader from '../../functions/loader.js';
+import { Link } from 'react-router';
 
 export default class Nav extends Component {
-
-  componentDidMount() {
-    loader();
-  }
 
   render() {
     return (
       <div>
+        <nav>
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/resume'>Resume</Link></li>
+          </ul>
+        </nav>
         { this.props.children }
       </div>
     );

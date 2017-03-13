@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import Button from '../partials/button';
-import loader from '../../functions/loader.js';
+import { Career, Expertise, Experience, Education } from '../resume';
 
-//Resume Partials
-import Career from '../partials/resume/career.js';
-import Expertise from '../partials/resume/expertise.js';
-import Experience from '../partials/resume/experience.js';
-import Education from '../partials/resume/education.js';
-
-export default class Resume extends Component {
-
-  componentDidMount() {
-    loader();
-  }
+class Resume extends Component {
 
   render() {
     return (
@@ -21,8 +10,9 @@ export default class Resume extends Component {
         <Expertise />
         <Experience />
         <Education />
-        <Button link="/" title="Return Home" />
       </div>
     );
   }
 }
+
+export default Resume;

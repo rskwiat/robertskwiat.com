@@ -5,7 +5,7 @@ class Header extends Component {
     return (
         <header className="container container-column" role="banner">
           <div className="profile profile-img" />
-          <h1 className={this.props.id}>{this.props.name}</h1>
+          <h1 className={this.props.items}>{this.props.name}</h1>
         </header>
     );
   }
