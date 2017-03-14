@@ -1,6 +1,5 @@
 // server.js
 
-import express from 'express';
 import favicon from 'serve-favicon';
 import path from 'path';
 import React from 'react';

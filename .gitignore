@@ -1,4 +1,7 @@
+.DS_Store
 node_modules
 public/dist
 public/index.html
 test/spec.js
+dist
+npm-debug.log
