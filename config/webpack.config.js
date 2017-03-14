@@ -26,7 +26,7 @@ module.exports = {
         exclude: /\node_modules/
       },
       {
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader?importLoaders=1', 'postcss-loader'],
         test: /\.css$/
       }
     ]
