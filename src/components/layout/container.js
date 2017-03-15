@@ -1,15 +1,17 @@
 import React from 'react';
 
-const Container = ({ children }) => {
-  return (
-    <div className="container">
-      {children}
-    </div>
-  );
+const Container = ({ children }) => (
+  <div className="container">
+    {children}
+  </div>
+);
+
+Container.defaultProps = {
+  children: '<div />'
 };
 
-Container.PropTypes = {
-  children: React.PropTypes.string.isRequired
+Container.propTypes = {
+  children: React.PropTypes.element
 };
 
 export { Container };

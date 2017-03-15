@@ -7,7 +7,8 @@
       }],
       "prefer-stateless-function": [ 0,
         { "ignorePureComponents": true
-      }]
+      }],
+      "prefer-default-export": 0
     },
   "env": {
     "browser": true,
