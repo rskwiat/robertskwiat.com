@@ -2,3 +2,7 @@
 node_modules
 npm-debug.log
 public
+
+/* Fabric Deploy Scripts */
+fabfile.py
+fabfile.pyc
