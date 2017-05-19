@@ -62,7 +62,7 @@
     "babel-preset-env": "^1.2.1",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
-    "eslint": "^#.#.#",
+    "eslint": "^3.2.2",
     "eslint-config-rallycoding": "^3.2.0",
     "file-loader": "^0.10.1",
     "ignore-styles": "^5.0.1",
