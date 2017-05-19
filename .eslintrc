@@ -1,15 +1,5 @@
 {
-  "extends": "airbnb",
-  rules: {
-      "comma-dangle": ["error", "never"],
-      "react/jsx-filename-extension": [1,
-        { "extensions": [".js", ".jsx"]
-      }],
-      "prefer-stateless-function": [ 0,
-        { "ignorePureComponents": true
-      }],
-      "prefer-default-export": 0
-    },
+  "extends": "rallycoding",
   "env": {
     "browser": true,
     "node": true

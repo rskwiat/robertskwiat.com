@@ -1,0 +1,37 @@
+header{
+
+}
+
+header .row{
+
+}
+
+.img-profile{
+  margin-bottom: 2.5rem;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid{
+  display: block;
+  padding: 0 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .grid{
+    display: grid;
+    padding: 0;
+  }
+
+  .about{
+    padding: 40px;
+  }
+
+}

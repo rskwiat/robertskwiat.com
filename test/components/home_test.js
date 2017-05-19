@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import assert from 'assert';
-import Home from '../../src/components/home';
+import Home from '../../src/pages/home';
 
 const renderer = ReactTestUtils.createRenderer();
 
@@ -17,10 +17,5 @@ describe('Check if Home Component Mounts', () => {
 
   it('Home Component Mounts', () => {
     assert(result);
-  });
-
-  it('Shows the Homepage text', () => {
-    const { children } = result.props.children.props;
-    assert(children === 'Home Page');
   });
 });

@@ -1,15 +1,16 @@
 import React from 'react';
-import { Container } from './components/layout';
 import routes from './routes';
 import Navigation from './components/navigation';
+import Footer from './components/footer';
 
 import './css/app.css';
 
 const App = () => (
-  <Container>
+  <div className="app">
     <Navigation />
     { routes }
-  </Container>
+    <Footer copyright="&copy; Robert Skwiat. Made in NYC" />
+  </div>
 );
 
 export default App;
