@@ -42,7 +42,9 @@
     "test": "mocha --compilers js:babel-register --require ./test/test_helper.js --require ignore-styles --recursive ./test",
     "clean": "rimraf public",
     "build": "NODE_ENV=production webpack -p --config ./config/webpack.config.js",
-    "postbuild": "cp src/images/favicon.ico public/favicon.ico && cp src/images/touch-icon.png public/touch-icon.png",
+    "postbuild": "npm run copy:images && npm run copy:text",
+    "copy:images": "cp src/images/favicon.ico public/favicon.ico && cp src/images/touch-icon.png public/touch-icon.png",
+    "copy:text": "cp src/humans.txt public/humans.txt && cp src/robots.txt public/robots.txt",
     "serve": "nodemon ./server",
     "dev": "webpack-dev-server --config ./config/webpack.config.js"
   },
