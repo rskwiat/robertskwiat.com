@@ -82,6 +82,9 @@ section{
 
 .error{
   height: 100vh;
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 0 10px;
 }
 
 @media (min-width: 768px) {
