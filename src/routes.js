@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import Home from './pages/home';
-import NotFound from './pages/notFound';
-import Resume from './pages/resume';
+import Home from './views/home';
+import NotFound from './views/notFound';
+import Resume from './views/resume';
 
 export default (
   <div>

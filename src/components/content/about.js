@@ -1,7 +1,7 @@
 export default ([
   {
     key: 'key',
-    copy: 'As a front end developer, I\'ve been lucky enough to work with a few excellent companies including Receptiv, Small Earth Group, Ten Twenty Five, and KBS+. I have a dual background in Design and Advertising, so I understand the visual mechanics as well as the coding that brings web applications together.',
+    copy: 'As a front end developer, I\'ve been lucky enough to work with a few excellent companies including MasterCard, Receptiv, Small Earth Group, Ten Twenty Five, and KBS+. I have a dual background in Design and Advertising, so I understand the visual mechanics as well as the coding that brings web applications together.',
   },
   {
     key: 'key1',

@@ -21,9 +21,12 @@ const Resume = () => (
 
     <div className="content">
       <h3>Work Experience:</h3>
+
+      <p className="subhead">MasterCard July 2017 ­- Present</p>
+      <p>Software Engineer API Platform</p>
       
-      <p className="subhead">Receptiv (Mediabrix): July 2015 ­- Present ­</p>
-      <p>Lead JS Engineer (October 2016 - Present)</p>
+      <p className="subhead">Receptiv (Mediabrix): July 2015 ­- July 2017 ­</p>
+      <p>Lead JS Engineer (October 2016 - July 2017)</p>
 
       <ul>
         <li>Headed initiative of documenting Mediabrix.com brand guidelines and new website</li>
