@@ -22,10 +22,10 @@ const Resume = () => (
     <div className="content">
       <h3>Work Experience:</h3>
 
-      <p className="subhead">MasterCard July 2017 ­- Present</p>
+      <p className="subhead">MasterCard <strong>July 2017 ­- Present</strong></p>
       <p>Software Engineer API Platform</p>
       
-      <p className="subhead">Receptiv (Mediabrix): July 2015 ­- July 2017 ­</p>
+      <p className="subhead">Receptiv (Mediabrix): <strong>July 2015 ­- July 2017</strong> ­</p>
       <p>Lead JS Engineer (October 2016 - July 2017)</p>
 
       <ul>

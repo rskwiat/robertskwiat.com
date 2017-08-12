@@ -4,9 +4,16 @@ const path = require('path');
 const HTMLWebpack = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const VENDOR_LIBS = [
+  'react',
+  'react-dom',
+  'react-router-dom'
+];
+
 module.exports = {
   entry: {
     bundle: './src/index.js',
+    vendor: VENDOR_LIBS
   },
   output: {
     path: path.join(__dirname, '../public'),
@@ -19,10 +26,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|images|css)/
       },
-      // {
-      //   use: ['style-loader', '', 'postcss-loader'],
-      //   test: /\.css$/
-      // },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract(
