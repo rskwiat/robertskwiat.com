@@ -2,29 +2,13 @@
   box-sizing: border-box;
 }
 
+
 body{
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   color: #3D3A3B;
 }
 
-ul li,
-p{
-  line-height: 1.9;
-}
-
-.subhead + p,
-.subhead{
-  margin: 0;
-}
-
-.text-center{
-	text-align: center;
-}
-
-h1, h2, h3{
-  font-weight: normal;
-}
 
 .container{
   max-width: 1140px;
@@ -41,16 +25,7 @@ h1, h2, h3{
   position: relative;
 }
 
-.row-padding{
-	padding: 2.500rem 0;
-}
 
-.row-flex{
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 section{
 	padding: 0 20px;

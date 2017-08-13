@@ -7,7 +7,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const VENDOR_LIBS = [
   'react',
   'react-dom',
-  'react-router-dom'
+  'react-router-dom',
+  'react-markdown',
+  'gsap'
 ];
 
 module.exports = {
@@ -33,8 +35,23 @@ module.exports = {
         )
       },
       {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+          use: [
+            'css-loader?-url&sourceMap',
+            'postcss-loader',
+            'sass-loader?sourceMap'
+          ]
+        })
+      },
+      {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
+        use: 'raw-loader'
+      },
+      {
+        test: /\.svg$/,
+        use: 'svg-inline-loader'
       },
       {
         test: /\.(jpe?g|png|gif)$/,

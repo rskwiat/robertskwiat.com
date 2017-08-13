@@ -1,0 +1,17 @@
+.resume{
+  margin: 4rem auto;
+  padding: 0 1rem;
+	max-width: 800px;
+  width: 100%;
+  position: relative;
+  @include medium {
+  	padding: 0;
+  }
+}
+
+.error{
+  height: 100vh;
+  margin: 4rem auto;
+  max-width: 800px;
+  padding: 0 10rem;
+}

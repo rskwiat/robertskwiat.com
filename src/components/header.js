@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import Logo from './icons/logo';
 import profile from '../images/headshot.png';
 import About from '../components/about';
-
 import { TweenLite } from 'gsap';
-
-import '../css/header.css';
 
 class Header extends Component {
   componentDidMount() {

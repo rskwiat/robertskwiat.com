@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
 import App from './app';
@@ -10,9 +10,12 @@ WebFont.load({
   }
 });
 
-ReactDOM.render(
-  <BrowserRouter>
+const target = document.getElementById('root');
+
+const app = (
+  <Router>
     <App />
-  </BrowserRouter>,
-  document.getElementById('root')
+  </Router>
 );
+
+ReactDOM.render(app, target);

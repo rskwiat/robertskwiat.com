@@ -3,7 +3,7 @@ import routes from './routes';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 
-import './css/app.css';
+import './css/app.scss';
 
 const App = () => (
   <div className="app">

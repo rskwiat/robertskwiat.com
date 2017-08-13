@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Github from './icons/github';
 import LinkedIn from './icons/linkedin';
 import Twitter from './icons/twitter';
@@ -23,7 +24,7 @@ Contact.defaultProps = {
 };
 
 Contact.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: PropTypes.string.isRequired
 };
 
 export default Contact;

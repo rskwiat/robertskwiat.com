@@ -1,0 +1,20 @@
+nav{
+  width: 100%;
+  margin: 0;
+  background: $gray;
+  padding: 2rem 0;
+  @include large {
+    text-align: right;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline;
+      padding: 0 2rem;
+      a{
+        color: $white;
+      }
+    }
+  }
+}
