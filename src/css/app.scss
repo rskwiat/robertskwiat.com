@@ -11,12 +11,19 @@ html{
 body{
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  color: #3D3A3B;
+  color: $gray;
 }
 
 @import 'globals/header';
 @import 'globals/typography';
 @import 'globals/navigation';
+
+.container{
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
 
 section{
 	padding: 0 2rem;

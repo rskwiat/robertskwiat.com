@@ -24,18 +24,23 @@ const Resume = () => (
 
       <p className="subhead">MasterCard <strong>July 2017 ­- Present</strong></p>
       <p>Software Engineer API Platform</p>
+
+      <ul>
+        <li>Added notification services to developer.mastercard.com</li>
+      </ul>
       
       <p className="subhead">Receptiv (Mediabrix): <strong>July 2015 ­- July 2017</strong> ­</p>
       <p>Lead JS Engineer (October 2016 - July 2017)</p>
 
       <ul>
         <li>Headed initiative of documenting Mediabrix.com brand guidelines and new website</li>
+        <li>Lead rebranding effort and Replatforming to new domain hosted on Receptiv.com</li>
       </ul>
 
       <p>Digital Developer (July 2015 - October 2016)</p>
 
       <ul>
-        <li> Document process in terms of proper modern front end standards</li>
+        <li>Documented process in terms of proper modern front end standards</li>
         <li>Created gulp build tooling for custom in-unit advertisements that optimize CSS, JS and Images</li>
         <li>Wrote out and documented unit tests in Jasmine for current frontend architecture</li>
         <li>Education of AdOps team on basic HTML, CSS, JavaScript and tooling</li>

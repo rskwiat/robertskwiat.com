@@ -15,7 +15,7 @@ header .row{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .grid{
@@ -23,6 +23,8 @@ header .row{
   padding: 0 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -36,7 +38,7 @@ header .row{
   }
 
   .about{
-    padding: 40px;
+    padding: 4rem;
   }
 
 }

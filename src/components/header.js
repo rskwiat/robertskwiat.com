@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import { TweenLite } from 'gsap';
+
 import Logo from './icons/logo';
 import profile from '../images/headshot.png';
 import About from '../components/about';
-import { TweenLite } from 'gsap';
 
 class Header extends Component {
   componentDidMount() {
@@ -34,7 +36,7 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
-  name: React.PropTypes.string.isRequired
+  name: PropTypes.string.isRequired
 };
 
 export default Header;
