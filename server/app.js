@@ -15,6 +15,12 @@ app.get('/humans.txt', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../public', 'humans.txt'));
 });
 
+app.get('/api/home', (req, res) => {
+  res.send({
+    hello: 'there'
+  });
+});
+
 app.get('*', (request, res) => {
   res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
 });

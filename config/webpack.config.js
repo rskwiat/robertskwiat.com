@@ -1,6 +1,7 @@
+/* eslint-disable */
+
 const webpack = require('webpack');
 const path = require('path');
-
 const HTMLWebpack = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -9,7 +10,8 @@ const VENDOR_LIBS = [
   'react-dom',
   'react-router-dom',
   'react-markdown',
-  'gsap'
+  'gsap',
+  'classnames'
 ];
 
 module.exports = {
