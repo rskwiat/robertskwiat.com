@@ -1,0 +1,7 @@
+/* TEAM */
+Robert Skwiat
+
+Github: https://github.com/rskwiat
+LinkedIn: http://linkedin.com/in/robertskwiat
+
+Tools Used: Create React App, Contentful, Google Webfonts and more!

@@ -1,7 +1,0 @@
-{
-  "extends": "rallycoding",
-  "env": {
-    "browser": true,
-    "node": true
-  }
-}

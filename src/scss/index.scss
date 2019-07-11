@@ -1,0 +1,45 @@
+@import 'variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  color: $gray;
+}
+
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2rem; }
+
+h1, h2, h3{
+  margin: 0 0 2rem;
+  font-weight: normal;
+}
+
+ul li,
+p{
+  margin: 0 0 2rem;
+  line-height: 1.9;
+  font-size: 1.6rem;
+}
+
+a{
+  transition: all 400ms ease-in-out;
+  color: $gray;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+}

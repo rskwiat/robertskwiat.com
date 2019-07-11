@@ -1,0 +1,29 @@
+@import 'variables.scss';
+
+.nav {
+  width: 100%;
+  margin: 0;
+  background: $gray;
+  @include large {
+    text-align: right;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      line-height: inherit;
+      display: inline;
+      margin: 0;
+      padding: 0;
+      a {
+        color: $white;
+        display: inline-block;
+        padding: 2rem 2rem;
+        &:hover {
+          background: rgba(255,255,255,.8);
+          color: $gray;
+        }
+      }
+    }
+  }
+}
