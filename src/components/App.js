@@ -6,8 +6,9 @@ import {
 } from 'react-router-dom';
 
 import Navigation from 'components/navigation';
-import Routes from 'constants/routes';
+import Contact from 'components/contact';
 import Footer from 'components/footer';
+import Routes from 'constants/routes';
 
 WebFont.load({
   google: {
@@ -27,7 +28,9 @@ const App = () => {
             path={route.path}
             component={route.component}
           />
-        ))}      
+        ))}
+
+        <Contact title="Contact and Questions" />        
         <Footer copyright="&copy; 2019 Robert Skwiat. Made in NYC"/>
       </div>
     </Router>
