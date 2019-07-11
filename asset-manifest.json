@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/robertskwiat.com/static/css/main.4b5c4acc.chunk.css",
+    "main.js": "/robertskwiat.com/static/js/main.eadf2860.chunk.js",
+    "main.js.map": "/robertskwiat.com/static/js/main.eadf2860.chunk.js.map",
+    "runtime~main.js": "/robertskwiat.com/static/js/runtime~main.1cc9542b.js",
+    "runtime~main.js.map": "/robertskwiat.com/static/js/runtime~main.1cc9542b.js.map",
+    "static/js/2.3310f33a.chunk.js": "/robertskwiat.com/static/js/2.3310f33a.chunk.js",
+    "static/js/2.3310f33a.chunk.js.map": "/robertskwiat.com/static/js/2.3310f33a.chunk.js.map",
+    "index.html": "/robertskwiat.com/index.html",
+    "precache-manifest.d0e370d23c82ecc11ecd941dffcdffa9.js": "/robertskwiat.com/precache-manifest.d0e370d23c82ecc11ecd941dffcdffa9.js",
+    "service-worker.js": "/robertskwiat.com/service-worker.js",
+    "static/css/main.4b5c4acc.chunk.css.map": "/robertskwiat.com/static/css/main.4b5c4acc.chunk.css.map"
+  }
+}
