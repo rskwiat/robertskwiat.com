@@ -1,4 +1,5 @@
 import Home from 'views/Home';
+import Resume from 'views/Resume';
 
 const Routes = [
   { path: '/',
@@ -8,7 +9,7 @@ const Routes = [
   {
     path: '/resume',
     title: 'Resume',
-    component: Home,
+    component: Resume,
   }
 ];
 
