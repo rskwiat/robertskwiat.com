@@ -1,18 +1,14 @@
 import React from 'react';
 import WebFont from 'webfontloader';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
 } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 
 import Navigation from 'components/navigation';
 import Contact from 'components/contact';
 import Footer from 'components/footer';
 import Routes from 'constants/routes';
-
-const customHistory = createBrowserHistory();
-
 
 WebFont.load({
   google: {
@@ -22,7 +18,7 @@ WebFont.load({
 
 const App = () => {
   return (
-    <Router history={customHistory}>
+    <Router>
       <div>
         <Navigation />
         { Routes.map((route, i) => (
