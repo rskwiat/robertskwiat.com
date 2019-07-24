@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Routes from 'constants/routes';
 import styles from 'scss/navigation.module.scss';
 
 const Navigation = () => {
@@ -8,8 +9,9 @@ const Navigation = () => {
     <nav className={styles.nav}>
       <div className="container">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
+          { Routes.map((route, i) => (
+            <li key={i}><Link to={route.path}>{route.title}</Link></li>
+          ))}
         </ul>
       </div>
     </nav>

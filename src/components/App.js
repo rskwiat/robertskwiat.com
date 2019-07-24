@@ -29,7 +29,6 @@ const App = () => {
             component={route.component}
           />
         ))}
-
         <Contact title="Contact and Questions" />        
         <Footer copyright="&copy; 2019 Robert Skwiat. Made in NYC"/>
       </div>
