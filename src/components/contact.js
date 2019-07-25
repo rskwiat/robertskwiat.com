@@ -26,11 +26,11 @@ const Contact = ({ title }) => (
         {items.map((item, i) => {
           switch(item.title) {
             case 'Github':
-              return <Github height="75px" width="75px" link={item.link} />
+              return <Github key={i} height="75px" width="75px" link={item.link} />
             case 'LinkedIn':
-              return <LinkedIn height="75px" width="75px" link={item.link} />
+              return <LinkedIn key={i} height="75px" width="75px" link={item.link} />
             case 'Email':
-              return <Email height="75px" width="75px" link={item.link} />
+              return <Email key={i} height="75px" width="75px" link={item.link} />
             default:
               return <div />
           }
