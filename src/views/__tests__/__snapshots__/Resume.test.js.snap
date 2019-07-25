@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Home page component The component 1`] = `
-<div>
-  <div
-    className="container"
-  />
-</div>
-`;
+exports[`The Home page component The component 1`] = `ReactWrapper {}`;
