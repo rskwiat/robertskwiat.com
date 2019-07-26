@@ -43,3 +43,26 @@ a{
   width: 100%;
   position: relative;
 }
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    margin: 0;
+    animation: loadingText 750ms ease-in-out infinite alternate;
+  }
+}
+
+@keyframes loadingText {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

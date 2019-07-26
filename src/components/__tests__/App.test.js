@@ -1,9 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+
 import App from '../App';
 
-describe('First React component test with Enzyme', () => {
+describe('Test that the App component renders', () => {
    it('renders without crashing', () => {
-      shallow(<App />);
+      const wrapper = shallow(<App />);
+      const app = wrapper.find('.app')
+      expect(app.length).toBe(1);
     });
 });

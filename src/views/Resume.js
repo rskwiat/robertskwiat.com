@@ -1,17 +1,18 @@
 import React, { Component} from 'react';
 import ReactMarkdown from 'react-markdown';
+import Loading from 'components/loading';
 
-const resume = require('constants/resume.md')
+import resume from 'constants/resume.md';
 
 class Resume extends Component {
   state = {
     resume: null,
   }
 
-  componentDidMount() {
-    fetch(resume)
-      .then(res => res.text())
-      .then(text => this.setState({ resume: text }));
+  async componentDidMount() {
+    const res = await fetch(resume);
+    const text = await res.text();
+    await this.setState({ resume: text });
   }
 
   render() {
@@ -22,7 +23,7 @@ class Resume extends Component {
     return (
       <div>
         <div className="container">
-          <ReactMarkdown source={resume} />
+          { resume ? <ReactMarkdown source={resume} />: <Loading />}
         </div>  
       </div>
     );

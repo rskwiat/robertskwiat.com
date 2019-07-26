@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Home page component The component 1`] = `ReactWrapper {}`;
+exports[`The Resume component renders the loading component when no state is set  1`] = `
+<Resume>
+  <div>
+    <div
+      className="container"
+    >
+      <mock-loading />
+    </div>
+  </div>
+</Resume>
+`;
+
+exports[`The Resume component renders the markdown component when a state is set 1`] = `
+<Resume>
+  <div>
+    <div
+      className="container"
+    >
+      <mock-markdown
+        source="# Markdown"
+      />
+    </div>
+  </div>
+</Resume>
+`;

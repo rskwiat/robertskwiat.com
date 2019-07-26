@@ -19,7 +19,7 @@ WebFont.load({
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className="app">
         <Navigation />
         { Routes.map((route, i) => (
           <Route
