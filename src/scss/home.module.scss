@@ -3,3 +3,23 @@
 .home {
   margin: 4rem 0;
 }
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include mediumScreen {
+    flex-direction: row;
+  }
+  img {
+    flex: 1;
+  }
+  div {
+    flex: 2  0 0;
+    margin: 2rem 0 0 0;
+    @include mediumScreen {
+      margin: 0 0 0 4rem;
+    }    
+  }
+}

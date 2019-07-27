@@ -6,25 +6,25 @@ $xlarge-width: 1200px;
 $white: #fff;
 $gray: #3D3A3B;
 
-@mixin small {
+@mixin smallScreen {
   @media (min-width: #{$small-width}) {
     @content;
   }
 }
 
-@mixin medium {
+@mixin mediumScreen {
   @media (min-width: #{$medium-width}) {
     @content;
   }	
 }
 
-@mixin large {
+@mixin largeScreen {
   @media (min-width: #{$large-width}) {
     @content;
   }
 }
 
-@mixin xlarge {
+@mixin xlargeScreen {
   @media (min-width: #{$xlarge-width}) {
     @content;
   }

@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import Loading from 'components/loading';
 
 import resume from 'constants/resume.md';
+import styles from 'scss/resume.module.scss';
 
 class Resume extends Component {
   state = {
@@ -21,7 +22,7 @@ class Resume extends Component {
     } = this.state;
 
     return (
-      <div>
+      <div className={styles['resume']}>
         <div className="container">
           { resume ? <ReactMarkdown source={resume} />: <Loading />}
         </div>  
