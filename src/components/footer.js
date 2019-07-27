@@ -15,4 +15,8 @@ Footer.propTypes = {
   copyright: PropTypes.string.isRequired
 };
 
+Footer.defaultProps = {
+  copyright: '2019'
+};
+
 export default Footer;

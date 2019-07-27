@@ -10,7 +10,7 @@ const Navigation = () => {
       <div className="container">
         <ul>
           { Routes.map((route, i) => (
-            <li key={i}><Link to={route.path}>{route.title}</Link></li>
+            <li class="nav-item" key={i}><Link to={route.path}>{route.title}</Link></li>
           ))}
         </ul>
       </div>
