@@ -2,7 +2,9 @@
 
 exports[`The Resume component renders the loading component when no state is set  1`] = `
 <Resume>
-  <div>
+  <div
+    className="resume"
+  >
     <div
       className="container"
     >
@@ -14,7 +16,9 @@ exports[`The Resume component renders the loading component when no state is set
 
 exports[`The Resume component renders the markdown component when a state is set 1`] = `
 <Resume>
-  <div>
+  <div
+    className="resume"
+  >
     <div
       className="container"
     >
