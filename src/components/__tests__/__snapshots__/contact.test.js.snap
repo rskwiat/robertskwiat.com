@@ -20,7 +20,7 @@ exports[`the Contact component renders renders with the icons and text 1`] = `
           width="75px"
         >
           <a
-            alt="github profile"
+            aira-label="github profile"
             href="https://github.com/rskwiat"
             rel="noopener noreferrer"
             target="_blank"
@@ -66,7 +66,7 @@ exports[`the Contact component renders renders with the icons and text 1`] = `
           width="75px"
         >
           <a
-            alt="linkedin profile"
+            aira-label="linkedin profile"
             href="https://linkedin.com/in/robertskwiat"
             rel="noopener noreferrer"
             target="_blank"
@@ -101,7 +101,7 @@ exports[`the Contact component renders renders with the icons and text 1`] = `
           width="75px"
         >
           <a
-            alt="email"
+            aira-label="email"
             href="mailto:rob@robertskwiat.com"
             rel="noopener noreferrer"
             target="_blank"

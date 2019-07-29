@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Github = ({ height, width, color, link }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" alt="github profile">
+  <a href={link} target="_blank" rel="noopener noreferrer" aira-label="github profile">
     <svg
       height={height}
       width={width}
@@ -38,7 +38,7 @@ Github.propTypes = {
 };
 
 export const LinkedIn = ({ height, width, color, link }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" alt="linkedin profile">
+  <a href={link} target="_blank" rel="noopener noreferrer" aira-label="linkedin profile">
     <svg
       height={height}
       width={width}
@@ -68,7 +68,7 @@ LinkedIn.propTypes = {
 };
 
 export const Email = ({ height, width, color, link }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" alt="email">
+  <a href={link} target="_blank" rel="noopener noreferrer" aira-label="email">
     <svg
       height={height}
       width={width} 
