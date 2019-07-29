@@ -5,11 +5,7 @@ exports[`The Resume component renders the loading component when no state is set
   <div
     className="resume"
   >
-    <div
-      className="container"
-    >
-      <mock-loading />
-    </div>
+    <mock-loading />
   </div>
 </Resume>
 `;
@@ -19,13 +15,9 @@ exports[`The Resume component renders the markdown component when a state is set
   <div
     className="resume"
   >
-    <div
-      className="container"
-    >
-      <mock-markdown
-        source="# Markdown"
-      />
-    </div>
+    <mock-markdown
+      source="# Markdown"
+    />
   </div>
 </Resume>
 `;

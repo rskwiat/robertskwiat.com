@@ -3,6 +3,7 @@
 exports[`that the Navigation component renders renders without crashing 1`] = `
 <nav
   className="nav"
+  role="navigation"
 >
   <div
     className="container"
