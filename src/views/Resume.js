@@ -23,9 +23,7 @@ class Resume extends Component {
 
     return (
       <div className={styles['resume']}>
-        <div className="container">
-          { resume ? <ReactMarkdown source={resume} />: <Loading />}
-        </div>  
+        { resume ? <ReactMarkdown source={resume} />: <Loading />}
       </div>
     );
   }

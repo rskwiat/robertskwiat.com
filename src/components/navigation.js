@@ -6,7 +6,7 @@ import styles from 'scss/navigation.module.scss';
 
 const Navigation = () => {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} role="navigation">
       <div className="container">
         <ul>
           { Routes.map((route, i) => (

@@ -12,10 +12,10 @@
   @include mediumScreen {
     flex-direction: row;
   }
-  img {
+  .image {
     flex: 1;
   }
-  div {
+  .bio {
     flex: 2  0 0;
     margin: 2rem 0 0 0;
     @include mediumScreen {

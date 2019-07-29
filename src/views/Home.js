@@ -10,8 +10,10 @@ const Home = () => {
     <div className={styles.home}>
       <div className="container">
         <div className={styles.profile}>
-          <img src={profileIMG} alt="Robert Skwiat" className="img-responsive" />
-          <div>
+          <div className={styles['image']}>
+            <img src={profileIMG} alt="Robert Skwiat" className="img-responsive" tabIndex="0" />
+          </div>
+          <div className={styles['bio']}>
             <Logo width='300px' />
             {about.map((text, i) => (
               <p key={i}>{text.copy}</p>
