@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Loading from 'components/loading';
 
