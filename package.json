@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "http://robertskwiat.com/",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-markdown": "^4.1.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.3.0",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -20,37 +20,15 @@
     "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    "plugins": [
-      "prettier"
-    ],
-    "extends": [
-      "react-app"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true
-        }
-      ]
-    }
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --single-quote --write",
+      "git add"
     ]
   },
   "jest": {
@@ -62,14 +40,18 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-prettier": "^3.1.1",
     "gh-pages": "^2.0.1",
     "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1",
     "pretty-quick": "^2.0.1",
     "react-test-renderer": "^16.8.6",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "stylelint": "^12.0.0",
+    "stylelint-prettier": "^1.1.1"
   }
 }
