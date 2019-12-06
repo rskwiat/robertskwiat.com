@@ -1,15 +1,15 @@
 const icons = [
   {
-    'title': 'Github',
-    'link': 'https://github.com/rskwiat'
+    title: "Github",
+    link: "https://github.com/rskwiat"
   },
   {
-    'title': 'LinkedIn',
-    'link': 'https://linkedin.com/in/robertskwiat'
+    title: "LinkedIn",
+    link: "https://linkedin.com/in/robertskwiat"
   },
   {
-    'title': 'Email',
-    'link': 'mailto:rob@robertskwiat.com'
+    title: "Email",
+    link: "mailto:rob@robertskwiat.com"
   }
 ];
 

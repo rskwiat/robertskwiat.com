@@ -21,7 +21,20 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "plugins": [
+      "prettier"
+    ],
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true
+        }
+      ]
+    }
   },
   "husky": {
     "hooks": {
@@ -49,10 +62,12 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
+    "eslint-plugin-prettier": "^3.1.1",
     "gh-pages": "^2.0.1",
     "husky": "^3.1.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
     "pretty-quick": "^2.0.1",
     "react-test-renderer": "^16.8.6",
     "rimraf": "^2.6.3"

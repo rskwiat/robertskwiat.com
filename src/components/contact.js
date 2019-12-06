@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from 'scss/contact.module.scss';
-import { Github, LinkedIn, Email } from 'components/icons';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "scss/contact.module.scss";
+import { Github, LinkedIn, Email } from "components/icons";
 
-import icons from 'constants/icons';
+import icons from "constants/icons";
 
 const Contact = ({ title }) => (
   <section className={styles.contact}>
@@ -11,15 +11,21 @@ const Contact = ({ title }) => (
       <h2>{title}</h2>
       <div className={styles.social}>
         {icons.map((icon, i) => {
-          switch(icon.title) {
-            case 'Github':
-              return <Github key={i} height="75px" width="75px" link={icon.link} />
-            case 'LinkedIn':
-              return <LinkedIn key={i} height="75px" width="75px" link={icon.link} />
-            case 'Email':
-              return <Email key={i} height="75px" width="75px" link={icon.link} />
+          switch (icon.title) {
+            case "Github":
+              return (
+                <Github key={i} height="75px" width="75px" link={icon.link} />
+              );
+            case "LinkedIn":
+              return (
+                <LinkedIn key={i} height="75px" width="75px" link={icon.link} />
+              );
+            case "Email":
+              return (
+                <Email key={i} height="75px" width="75px" link={icon.link} />
+              );
             default:
-              return <div />
+              return <div />;
           }
         })}
       </div>

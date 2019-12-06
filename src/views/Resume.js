@@ -1,14 +1,14 @@
-import React, { Component} from 'react';
-import ReactMarkdown from 'react-markdown';
-import Loading from 'components/loading';
+import React, { Component } from "react";
+import ReactMarkdown from "react-markdown";
+import Loading from "components/loading";
 
-import resume from 'constants/resume.md';
-import styles from 'scss/resume.module.scss';
+import resume from "constants/resume.md";
+import styles from "scss/resume.module.scss";
 
 class Resume extends Component {
   state = {
-    resume: null,
-  }
+    resume: null
+  };
 
   async componentDidMount() {
     const res = await fetch(resume);
@@ -17,13 +17,11 @@ class Resume extends Component {
   }
 
   render() {
-    const {
-      resume
-    } = this.state;
+    const { resume } = this.state;
 
     return (
-      <div className={styles['resume']}>
-        { resume ? <ReactMarkdown source={resume} />: <Loading />}
+      <div className={styles["resume"]}>
+        {resume ? <ReactMarkdown source={resume} /> : <Loading />}
       </div>
     );
   }
