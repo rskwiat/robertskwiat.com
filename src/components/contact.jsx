@@ -10,20 +10,14 @@ const Contact = ({ title }) => (
     <div className="container">
       <h2>{title}</h2>
       <div className={styles.social}>
-        {icons.map((icon, i) => {
+        {icons.map(icon => {
           switch (icon.title) {
             case 'Github':
-              return (
-                <Github key={i} height="75px" width="75px" link={icon.link} />
-              );
+              return <Github height="75px" width="75px" link={icon.link} />;
             case 'LinkedIn':
-              return (
-                <LinkedIn key={i} height="75px" width="75px" link={icon.link} />
-              );
+              return <LinkedIn height="75px" width="75px" link={icon.link} />;
             case 'Email':
-              return (
-                <Email key={i} height="75px" width="75px" link={icon.link} />
-              );
+              return <Email height="75px" width="75px" link={icon.link} />;
             default:
               return <div />;
           }
