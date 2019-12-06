@@ -6,5 +6,6 @@ module.exports = {
   "rules": {
     "import/no-unresolved": false,
     "arrow-parens": false,
+    "arrow-body-style": false
   }
 }
