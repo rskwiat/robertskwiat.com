@@ -1,15 +1,15 @@
-import React from "react";
-import WebFont from "webfontloader";
-import { HashRouter as Router, Route } from "react-router-dom";
+import React from 'react';
+import WebFont from 'webfontloader';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
-import Navigation from "components/navigation";
-import Contact from "components/contact";
-import Footer from "components/footer";
-import Routes from "constants/routes";
+import Navigation from 'components/navigation';
+import Contact from 'components/contact';
+import Footer from 'components/footer';
+import Routes from 'constants/routes';
 
 WebFont.load({
   google: {
-    families: ["Open+Sans:400,600"]
+    families: ['Open+Sans:400,600']
   }
 });
 

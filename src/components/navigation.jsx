@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Routes from "constants/routes";
-import styles from "scss/navigation.module.scss";
+import Routes from 'constants/routes';
+import styles from 'scss/navigation.module.scss';
 
 const Navigation = () => {
   return (
