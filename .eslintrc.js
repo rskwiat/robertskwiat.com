@@ -4,6 +4,7 @@ module.exports = {
     "airbnb"
   ],
   "rules": {
-    "import/no-unresolved": false
+    "import/no-unresolved": false,
+    "arrow-parens": false,
   }
 }

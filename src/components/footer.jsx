@@ -12,11 +12,11 @@ const Footer = ({ copyright }) => {
 };
 
 Footer.propTypes = {
-  copyright: PropTypes.string
+  copyright: PropTypes.string,
 };
 
 Footer.defaultProps = {
-  copyright: '2019'
+  copyright: '2019',
 };
 
 export default Footer;

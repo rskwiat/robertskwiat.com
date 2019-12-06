@@ -10,7 +10,7 @@ const Contact = ({ title }) => (
     <div className="container">
       <h2>{title}</h2>
       <div className={styles.social}>
-        {icons.map(icon => {
+        {icons.map((icon) => {
           switch (icon.title) {
             case 'Github':
               return <Github height="75px" width="75px" link={icon.link} />;
@@ -28,7 +28,7 @@ const Contact = ({ title }) => (
 );
 
 Contact.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default Contact;
