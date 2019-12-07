@@ -5,7 +5,7 @@ module.exports = {
   ],
   "rules": {
     "import/no-unresolved": false,
-    "arrow-parens": false,
+    "arrow-parens": 0,
     "arrow-body-style": false
   }
 }
