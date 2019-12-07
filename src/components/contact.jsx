@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from 'scss/contact.module.scss';
-import { Github, LinkedIn, Email } from 'components/icons';
+import { SVG } from 'components/icons';
 
+import styles from 'scss/contact.module.scss';
 import icons from 'constants/icons';
 
 const Contact = ({ title }) => (
@@ -10,17 +10,8 @@ const Contact = ({ title }) => (
     <div className="container">
       <h2>{title}</h2>
       <div className={styles.social}>
-        {icons.map((icon) => {
-          switch (icon.title) {
-            case 'Github':
-              return <Github height="75px" width="75px" link={icon.link} />;
-            case 'LinkedIn':
-              return <LinkedIn height="75px" width="75px" link={icon.link} />;
-            case 'Email':
-              return <Email height="75px" width="75px" link={icon.link} />;
-            default:
-              return <div />;
-          }
+        {icons.map((icon, i) => {
+          return <SVG icon={icon.icon} link={icon.link} title={icon.title} />;
         })}
       </div>
     </div>

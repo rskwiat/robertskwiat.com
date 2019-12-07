@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import 'variables.scss';
 
 .contact {
   padding: 8rem 0;
@@ -16,5 +16,7 @@
   align-items: center;
   svg {
     margin: 0 2rem;
+    width: 4rem;
+    height: 4rem;
   }
 }
