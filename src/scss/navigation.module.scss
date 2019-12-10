@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 .nav {
   width: 100%;
@@ -20,7 +20,7 @@
         display: inline-block;
         padding: 2rem 2rem;
         &:hover {
-          background: rgba(255,255,255,.8);
+          background: rgba(255, 255, 255, 0.8);
           color: $gray;
         }
       }

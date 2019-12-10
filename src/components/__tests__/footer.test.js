@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Footer from '../Footer';
+import Footer from '../footer';
 
 let wrapper;
 
@@ -21,5 +21,4 @@ describe('the Footer component renders', () => {
     wrapper = shallow(<Footer copyright="Some Text" />);
     expect(wrapper.text()).toEqual('Some Text');
   });
-
 });

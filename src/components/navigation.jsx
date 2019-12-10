@@ -9,8 +9,10 @@ const Navigation = () => {
     <nav className={styles.nav} role="navigation">
       <div className="container">
         <ul>
-          { Routes.map((route, i) => (
-            <li className="nav-item" key={i}><Link to={route.path}>{route.title}</Link></li>
+          {Routes.map((route, i) => (
+            <li className="nav-item" key={i}>
+              <Link to={route.path}>{route.title}</Link>
+            </li>
           ))}
         </ul>
       </div>

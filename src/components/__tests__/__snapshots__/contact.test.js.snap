@@ -15,7 +15,6 @@ exports[`the Contact component renders renders with the icons and text 1`] = `
         <Github
           color="#000"
           height="75px"
-          key="0"
           link="https://github.com/rskwiat"
           width="75px"
         >
@@ -61,7 +60,6 @@ exports[`the Contact component renders renders with the icons and text 1`] = `
         <LinkedIn
           color="#000"
           height="75px"
-          key="1"
           link="https://linkedin.com/in/robertskwiat"
           width="75px"
         >
@@ -96,7 +94,6 @@ exports[`the Contact component renders renders with the icons and text 1`] = `
         <Email
           color="#000"
           height="75px"
-          key="2"
           link="mailto:rob@robertskwiat.com"
           width="75px"
         >
