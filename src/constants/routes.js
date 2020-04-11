@@ -1,16 +1,22 @@
-import Home from 'views/Home';
-import Resume from 'views/Resume';
+import { lazy } from 'react';
 
-const Routes = [
-  { path: '/',
+const Home = lazy(() => import('views/Home'));
+const Projects = lazy(() => import('views/Projects'));
+const NoMatch = lazy(() => import('views/noMatch'));
+
+export const Routes = [
+  {
     title: 'Home',
-    component: Home 
+    path: '/',
+    component: Home,
   },
   {
-    path: '/resume',
-    title: 'Resume',
-    component: Resume,
-  }
+    title: 'Projects',
+    path: '/projects',
+    component: Projects,
+  },
+  {
+    title: 'Error',
+    component: NoMatch,
+  },
 ];
-
-export default Routes;
