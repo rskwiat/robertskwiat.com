@@ -10,9 +10,14 @@ const icons = [
     link: 'https://linkedin.com/in/robertskwiat',
   },
   {
-    icon: 'icon-mail3',
+    icon: 'icon-mail',
     title: 'Email',
     link: 'mailto:rob@robertskwiat.com',
+  },
+  {
+    icon: 'icon-download',
+    title: 'Download Resume',
+    link: '/pdf/Robert_Skwiat_Resume.pdf',
   },
 ];
 

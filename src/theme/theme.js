@@ -1,6 +1,7 @@
 export const theme = {
   white: '#f8f8f8',
   gray: '#3d3a3b',
+  bg: '#dfe6e9',
   bodyFont: 'Open Sans, sans-serif',
 };
 

@@ -27,7 +27,6 @@ const NavBar = styled.nav`
 
 const Nav = () => {
   const location = useLocation();
-  console.log(location);
   return (
     <NavBar>
       <div className="container">

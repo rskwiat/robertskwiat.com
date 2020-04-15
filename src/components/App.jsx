@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import WebFont from 'webfontloader';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Loading from 'components/loading';
@@ -7,11 +6,7 @@ import { Theme } from 'theme/createTheme';
 import { Routes } from 'constants/routes';
 
 import Nav from 'components/nav';
-WebFont.load({
-  google: {
-    families: ['Open+Sans:400,600'],
-  },
-});
+import Footer from 'components/footer';
 
 const App = () => {
   return (
@@ -33,6 +28,7 @@ const App = () => {
               );
             })}
           </Switch>
+          <Footer text="&copy; 2020 Made in NYC" />
         </Suspense>
       </Theme>
     </Router>
