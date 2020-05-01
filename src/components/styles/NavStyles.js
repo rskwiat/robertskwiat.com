@@ -1,22 +1,33 @@
 import styled from 'styled-components';
 
 const NavStyles = styled.nav`
-  background: ${(props) => props.theme.gray};
   position: relative;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   a {
+    position: relative;
     display: inline-block;
-    padding: 2rem 1rem;
-    color: ${(props) => props.theme.white};
-    font-size: 1.6rem;
-    transition: background 350ms ease-in-out;
+    padding: 2rem 2.5rem;
+    color: ${(props) => props.theme.gray};
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 350ms ease-in-out;
     &:hover {
-      background: rgba(0, 0, 0, 0.2);
+      color: ${(props) => props.theme.highlight};
     }
-
     &.active {
-      background: rgba(0, 0, 0, 0.2);
+      &:after {
+        content: '';
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        left: 1.75rem;
+        z-index: -1;
+        background: ${(props) => props.theme.highlight};
+      }
     }
   }
 `;

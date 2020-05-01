@@ -7,19 +7,17 @@ const Nav = () => {
   const location = useLocation();
   return (
     <NavStyles>
-      <div className="container">
-        {Routes.map((route) => {
-          return route.path ? (
-            <Link
-              key={route.title}
-              className={route.path === location.pathname ? 'active' : null}
-              to={route.path}
-            >
-              {route.title}
-            </Link>
-          ) : null;
-        })}
-      </div>
+      {Routes.map((route) => {
+        return route.path ? (
+          <Link
+            key={route.title}
+            className={route.path === location.pathname ? 'active' : null}
+            to={route.path}
+          >
+            {route.title}
+          </Link>
+        ) : null;
+      })}
     </NavStyles>
   );
 };

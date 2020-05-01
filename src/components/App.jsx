@@ -7,12 +7,14 @@ import { Routes } from 'constants/routes';
 
 import Nav from 'components/nav';
 import Footer from 'components/footer';
+import Logo from 'components/Logo';
 
 const App = () => {
   return (
     <Router>
       <Theme>
         <Suspense fallback={<Loading />}>
+          <Logo />
           <Nav />
           <Switch>
             {Routes.map((route) => {

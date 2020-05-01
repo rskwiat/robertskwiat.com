@@ -2,6 +2,7 @@ export const theme = {
   white: '#f8f8f8',
   gray: '#3d3a3b',
   bg: '#dfe6e9',
+  highlight: 'rgb(233, 113, 23)',
   bodyFont: 'Open Sans, sans-serif',
 };
 

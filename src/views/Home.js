@@ -5,8 +5,6 @@ import icons from 'constants/icons';
 
 const Home = () => (
   <div>
-    Home
-    <a href={'/pdf/Robert_Skwiat_Resume.pdf'}>Download Resume</a>
     <p>
       Software Engineer specializing in React, Redux and JavaScript. Diverse
       company background consisting of 10+ years of experience in advertising
