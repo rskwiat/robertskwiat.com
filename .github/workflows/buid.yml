@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          bun ci
+          bun install
           bun run build
 
       - name: Deploy
