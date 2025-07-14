@@ -25,7 +25,7 @@ jobs:
         run: bun install
 
       - name: Build
-        run: bun run buildd
+        run: bun run build
 
       - name: 'Setup'
         uses: actions/configure-pages@v4
