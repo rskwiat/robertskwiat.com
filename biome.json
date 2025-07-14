@@ -26,6 +26,14 @@
       "quoteStyle": "single"
     }
   },
+  "overrides": [
+    {
+      "includes": ["**/*.njk"],
+      "formatter": {
+        "enabled": true
+      }
+    }
+  ],
   "assist": {
     "enabled": true,
     "actions": {
