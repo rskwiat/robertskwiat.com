@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  {% include "components/head.njk" %}
+
+  <body>
+    <main>
+      
+    {% for link in settings.navigation %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+
+
+
+      {{ content | safe }}
+    </main>
+  </body>
+</html>

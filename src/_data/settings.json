@@ -3,5 +3,27 @@
   "meta": [""],
   "copyright": 2025,
   "author": "@robert.skwiat",
-  "description": ""
+  "description": "",
+  "navigation": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Projects",
+      "url": "/projects"
+    },
+    {
+      "title": "Blog",
+      "url": "/blog"
+    },
+    {
+      "title": "Teaching",
+      "url": "/teaching"
+    },
+    {
+      "title": "Resume",
+      "url": "/something.pdf"
+    }
+  ]
 }
