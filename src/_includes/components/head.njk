@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ settings.site_title }} | {{ settings.description }} </title>
+  <title>{{ title or "Page" }} | {{ settings.site_title }} </title>
   <meta name="description" content="{{ settings.description | escape }}" />
   <meta name="keywords" content="{{ settings.meta }}" /> 
   <link rel="preconnect" href="https://fonts.googleapis.com">

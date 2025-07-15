@@ -1,9 +1,4 @@
 ---
 layout: "layouts/base.njk"
-title: Robert Skwiat
+title: Home
 ---
-
-
-# {{title}} -- Coming Soon
-
-{{settings.copyright}}
