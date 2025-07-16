@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "bun run clean.js",
     "build": "NODE_ENV=production bunx @11ty/eleventy",
+    "prestart": "bun clean",
     "start": "bunx @11ty/eleventy --watch --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
