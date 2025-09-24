@@ -1,8 +1,4 @@
-h1 {
-  font-family: "Crete Round", serif;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  color: #555;
-}
+@layer reset, base;
+@import './variables.css';
+@import './reset.css' layer(reset);
+@import './base.css' layer(base);
