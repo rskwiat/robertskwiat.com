@@ -1,0 +1,12 @@
+---
+layout: "layouts/base.njk"
+title: Blog
+---
+
+{% block content %}
+	{% for post in collections.blog %}
+		{{ post.data.title }}
+		<a href={{ post.url }}>Read More</a>
+
+	{% endfor %}
+{% endblock %}
