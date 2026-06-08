@@ -29,6 +29,8 @@ export default async function (eleventyConfig) {
 	});
 
 	eleventyConfig.on("eleventy.before", async () => {
+		eleventyConfig.addPassthroughCopy("./src/styles/");
+
 		const cssInput = path.resolve("./src/styles/main.css");
 		const compiledCSSOutput = "./dist/styles/main.css";
 

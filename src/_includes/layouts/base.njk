@@ -10,12 +10,6 @@
         {% endfor %}
       </nav>
 
-      <nav class="mobile-nav">
-        {% for link in settings.navigation %}
-          <a href="{{ link.url }}">{{ link.title }}</a>
-        {% endfor %}
-      </nav>
-
       <div class="container">
         {{ content | safe }}
       </div>
