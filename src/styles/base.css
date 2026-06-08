@@ -64,6 +64,10 @@ nav {
   display: none;
 }
 
+.full-screen {
+  height: 100vh;
+}
+
 @media (min-width: 676px) {
   .desktop-nav {
     display: block;

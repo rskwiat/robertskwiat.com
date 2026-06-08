@@ -7,22 +7,22 @@
   "navigation": [
     {
       "title": "Home",
+      "dataScrollTo": "home",
       "url": "/"
     },
     {
       "title": "Projects",
-      "url": "/projects"
-    },
-    {
-      "title": "Blog",
-      "url": "/blog"
+      "dataScrollTo": "projects",
+      "url": "/#projects"
     },
     {
       "title": "Teaching",
+      "dataScrollTo": "#",
       "url": "/teaching"
     },
     {
       "title": "Resume",
+      "dataScrollTo": "#",
       "url": "/something.pdf"
     }
   ]
