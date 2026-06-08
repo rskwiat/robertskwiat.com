@@ -4,11 +4,11 @@
 
   <body>
     <main>
-      <nav class="desktop-nav">
+      {# <nav class="desktop-nav">
         {% for link in settings.navigation %}
           <a href="{{ link.url }}" data-scroll-to={{link.dataScrollTo}}>{{ link.title }}</a>
         {% endfor %}
-      </nav>
+      </nav> #}
 
       <div class="container">
         {{ content | safe }}

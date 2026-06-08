@@ -3,13 +3,10 @@ layout: "layouts/base.njk"
 title: Home
 ---
 
-
 <div class="full-screen">
 
 <div id="home">
-Home Page
-
-  List of projects
+  <h1>Coming Soon</h1>
 </div>
 
 
@@ -17,11 +14,11 @@ Home Page
 
 
 
-<div class="full-screen">
+<!-- <div class="full-screen">
 # Projects
 
 <div id="projects">
   List of projects
 </div>
 
-</div>
+</div> -->
