@@ -1,7 +1,8 @@
 body {
-  background: rgba(0, 184, 0, 0.05); /* Very light teal with 5% opacity */
   font-family: var(--body-font);
-  color: #555;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 200ms, color 200ms;
 }
 
 html {
@@ -13,7 +14,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -32,12 +33,6 @@ a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 1.8rem;
-}
-
 nav {
   font-family: var(--serif-font);
   padding: 2rem 0;
@@ -49,42 +44,4 @@ nav {
     font-size: 2.4rem;
     color: initial;
   }
-}
-
-.mobile-nav {
-	justify-content: flex-start;
-
-	a {
-		font-size: 1.8rem;
-	}
-}
-
-
-.desktop-nav {
-  display: none;
-}
-
-.full-screen {
-  height: 100vh;
-}
-
-@media (min-width: 676px) {
-  .desktop-nav {
-    display: block;
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-
-    a {
-      display: block;
-      margin: 0 0 2rem 0;
-      width: 200px;
-    }
-  }
-
-	.mobile-nav {
-		display: none;
-	}
-
 }

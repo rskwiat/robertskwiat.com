@@ -1,0 +1,65 @@
+.headline {
+  font-weight: bold;
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.8rem;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.full-screen {
+  height: 100vh;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mb {
+  margin-bottom: 2rem;
+}
+
+.theme-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+#icon-sun,
+#icon-moon {
+  stroke: var(--icon-fill-color);
+}
+
+@media (min-width: 676px) {
+  .desktop-nav {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    a {
+      display: block;
+      margin: 0 0 2rem 0;
+      width: 200px;
+    }
+  }
+
+	.mobile-nav {
+		display: none;
+	}
+
+}
