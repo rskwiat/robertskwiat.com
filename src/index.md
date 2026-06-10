@@ -4,12 +4,15 @@ title: Home
 ---
 
 <div id="home" class="full-screen stack">
-  <div>
-    <p class="headline">Hello, I am</p>
-    <h1 class="mb">Robert Skwiat</h1>
-    <h3>A Full Stack Software Engineer - specializing in building React, TypeScript and Mobile Applications</h3>
+  <div class="welcome">
+    <p class="headline accent label-font">// Hello, I am</p>
+    <h1 class="mb">Robert <span class="accent">Skwiat.</span></h1>
+    <h3 class="body-font">I like to build things — specializing in full stack applications building React, TypeScript and Mobile Applications.</h3>
+    <button class="btn btn-primary">Get in touch</button>
   </div>
 </div>
+
+
 
 
 

@@ -1,7 +1,40 @@
+.label-font {
+  font-family: var(--label-font);
+}
+
+.body-font {
+  font-family: var(--body-font);
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
 .headline {
   font-weight: bold;
-  font-size: 3.2rem;
-  margin: 0;
+  font-size: 1.5em;
+  margin: 0 0 4rem 0;
+}
+
+.welcome .btn {
+  margin-top: 6rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 2.4rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  font-family: var(--label-font);
+  color: var(--button-text-color);
+  transition: filter 350ms;
+  &:hover {
+    filter: brightness(85%);
+  }
 }
 
 .container {

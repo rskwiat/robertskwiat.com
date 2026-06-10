@@ -1,11 +1,15 @@
-:root {
-  --serif-font: 'Crete Round', serif;
-  --body-font: 'Lato', sans-serif;
+:root,
+html[data-theme="light"] {
+  --headings-font: 'Outfit', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+  --label-font: 'Crete Round', serif;
 
   --bg-color: #ffffff;
   --text-color: #333333;
   --border-color: #e0e0e0;
   --icon-fill-color: #333333;
+  --accent-color: #00cc6f;
+  --button-text-color: #1a1a1a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +18,8 @@
     --text-color: #e0e0e0;
     --border-color: #444444;
     --icon-fill-color: #e0e0e0;
+    --accent-color: #00ff88;
+    --button-text-color: #1a1a1a;
   }
 }
 
@@ -22,11 +28,6 @@ html[data-theme="dark"] {
   --text-color: #e0e0e0;
   --border-color: #444444;
   --icon-fill-color: #e0e0e0;
-}
-
-html[data-theme="light"] {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --border-color: #e0e0e0;
-  --icon-fill-color: #333333;
+  --accent-color: #00ff88;
+  --button-text-color: #1a1a1a;
 }
