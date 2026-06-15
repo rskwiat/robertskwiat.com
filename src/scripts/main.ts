@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const workerUrl = (window as any).WORKER_URL;
+
+	if (!workerUrl) {
+		console.warn("WORKER_URL not set in head.njk");
+	}
+
 	function initTheme() {
 		const html = document.documentElement;
 		const savedTheme = localStorage.getItem("theme");

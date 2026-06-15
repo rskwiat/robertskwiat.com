@@ -1,9 +1,13 @@
 {
   "site_title": "Robert Skwiat",
   "meta": [""],
-  "copyright": 2026,
   "author": "@robert.skwiat",
   "description": "",
+  "urls": {
+    "github": "https://github.com/rskwiat/",
+    "linkedin": "https://www.linkedin.com/in/robert-skwiat",
+    "bsky": "https://bsky.app/profile/rskwiat.github.io"
+  },
   "navigation": [
     {
       "title": "Home",
