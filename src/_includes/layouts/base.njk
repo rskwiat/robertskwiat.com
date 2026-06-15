@@ -6,20 +6,14 @@
     <main>
       {% include "components/dark-mode.njk" %}
 
-
-      {# <nav class="desktop-nav">
-        {% for link in settings.navigation %}
-          <a href="{{ link.url }}" data-scroll-to={{link.dataScrollTo}}>{{ link.title }}</a>
-        {% endfor %}
-      </nav> #}
-
       <div class="container">
         {{ content | safe }}
+
+        {% include "components/see-more.njk" %}
       </div>
 
       <footer>
-        Footer
-        {# <p>&copy; {{ "now" | date("YYYY") }} {{ settings.siteTitle }}</p> #}
+        <p>&copy; {{ helpers.currentYear() }} {{ settings.siteTitle }}</p>
       </footer>
     </main>
   </body>

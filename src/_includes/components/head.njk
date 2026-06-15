@@ -10,5 +10,11 @@
 
 
   <link rel="stylesheet" href="{{ '/styles/main.css' | url }}" />
+  <script>
+    window.WORKER_URL = "{{ env.workerUrl }}";
 
+    console.log("WORKER_URL", window.WORKER_URL);
+  </script>
 </head>
+
+

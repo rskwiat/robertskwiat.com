@@ -13,14 +13,9 @@ title: Home
 </div>
 
 
-
-
-
-<!-- <div class="full-screen">
-# Projects
-
-<div id="projects">
-  List of projects
+<div id="projects" class="full-screen stack">
+  <div class="welcome">
+    <p class="headline accent label-font">// Projects</p>
+    <h3 class="body-font">Coming Soon... for real</h3>
+  </div>
 </div>
-
-</div> -->

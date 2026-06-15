@@ -71,6 +71,10 @@
   border: 0;
 }
 
+.learn-more-link svg {
+  display: inline-block
+}
+
 #icon-sun,
 #icon-moon {
   stroke: var(--icon-fill-color);
