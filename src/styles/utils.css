@@ -91,6 +91,20 @@
   margin: 4rem 0;
 }
 
+nav ul li a:hover .tooltip {
+  display: block;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: var(--tooltip-background-color);
+  color: var(--tooltip-text-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
 #icon-sun,
 #icon-moon {
   stroke: var(--icon-fill-color);

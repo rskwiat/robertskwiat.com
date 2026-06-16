@@ -5,10 +5,12 @@
   <body>
     <main>
       {% include "components/dark-mode.njk" %}
+      {% include "components/navigation.njk" %}
 
       <div class="container">
         <section>
-        {{ content | safe }}
+          <h1>{{ title }}</h1>
+          {{ content | safe }}
         </section>
       </div>
       {% include "components/footer.njk" %}

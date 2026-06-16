@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    {% for item in settings.navigation %}
+      <li>
+        <a href="{{ item.url }}" data-scroll-to="{{ item.dataScrollTo }}">
+          {% if item.icon %}
+            <span class="tooltip">{{ item.title }}</span>
+            {{ item.icon | safe }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
