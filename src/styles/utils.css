@@ -75,6 +75,18 @@
   display: inline-block
 }
 
+.footer-links {
+  list-style: none;
+  display: inline-block;  
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 0 0 2rem;
+}
+
 #icon-sun,
 #icon-moon {
   stroke: var(--icon-fill-color);
