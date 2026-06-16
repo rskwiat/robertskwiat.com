@@ -19,3 +19,11 @@ title: Home
     <h3 class="body-font">Coming Soon... for real</h3>
   </div>
 </div>
+
+{% block content %}
+	{% for post in collections.blog %}
+		<h1>{{ post.data.title }}</h1>
+		<a href={{ post.url }}>Read More</a>
+
+	{% endfor %}
+{% endblock %}

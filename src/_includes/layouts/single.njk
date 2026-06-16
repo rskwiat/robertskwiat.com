@@ -7,11 +7,10 @@
       {% include "components/dark-mode.njk" %}
 
       <div class="container">
+        <section>
         {{ content | safe }}
-
-        {% include "components/see-more.njk" %}
+        </section>
       </div>
-
       {% include "components/footer.njk" %}
     </main>
   </body>

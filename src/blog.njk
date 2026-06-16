@@ -5,7 +5,7 @@ title: Blog
 
 {% block content %}
 	{% for post in collections.blog %}
-		{{ post.data.title }}
+		<h1>{{ post.data.title }}</h1>
 		<a href={{ post.url }}>Read More</a>
 
 	{% endfor %}
