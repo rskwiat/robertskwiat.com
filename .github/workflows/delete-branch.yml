@@ -8,7 +8,6 @@ jobs:
   delete-branch:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
-    runs-allowed: true
 
     permissions:
       contents: write
