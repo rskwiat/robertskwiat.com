@@ -8,7 +8,11 @@ title: Home
     <p class="headline accent label-font">// Hello, I am</p>
     <h1 class="mb">Robert <span class="accent">Skwiat.</span></h1>
     <h3 class="body-font">I like to build things — specializing in full stack applications building React, TypeScript and Mobile Applications.</h3>
-    <button class="btn btn-primary">Get in touch</button>
+
+    <div class="row m6">
+      <button class="btn btn-primary">Get in touch</button>
+      <p class="accent label-font">Available for Hire / Freelance Work</p>
+    </div>
   </div>
 </div>
 
@@ -19,11 +23,3 @@ title: Home
     <h3 class="body-font">Coming Soon... for real</h3>
   </div>
 </div>
-
-{% block content %}
-	{% for post in collections.blog %}
-		<h1>{{ post.data.title }}</h1>
-		<a href={{ post.url }}>Read More</a>
-
-	{% endfor %}
-{% endblock %}
