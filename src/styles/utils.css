@@ -21,15 +21,25 @@
   cursor: pointer;
   font-size: 2.4rem;
   padding: 0.8rem 1.6rem;
+  min-height: 5.2rem;
+  display: inline-block;
+  transition: filter 350ms ease-in-out;
+}
+
+.btn-primay-inverse {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  &:hover {
+    filter: brightness(75%);
+  }
 }
 
 .btn-primary {
   background-color: var(--accent-color);
   font-family: var(--label-font);
   color: var(--button-text-color);
-  transition: filter 350ms;
   &:hover {
-    filter: brightness(85%);
+    filter: brightness(75%);
   }
 }
 
