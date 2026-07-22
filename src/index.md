@@ -8,11 +8,14 @@ title: Home
     <p class="headline accent label-font">// Hello, I am</p>
     <h1 class="mb">Robert <span class="accent">Skwiat.</span></h1>
     <h3 class="body-font">I like to build things — specializing in full stack applications building React, TypeScript and Mobile Applications.</h3>
+      <p class="accent label-font">Available for Hire / Freelance Work</p>
 
     <div class="row m6">
       <button class="btn btn-primary">Get in touch</button>
-      <p class="accent label-font">Available for Hire / Freelance Work</p>
+      <a href="/docs/robert_skwiat_resumse_20260616.pdf" target="_blank" class="btn btn-primay-inverse">Download Resume</a>
     </div>
+
+
   </div>
 </div>
 

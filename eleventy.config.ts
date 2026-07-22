@@ -15,7 +15,8 @@ config();
 export default async function (eleventyConfig: any) {
 	eleventyConfig.addWatchTarget("./src/");
 	eleventyConfig.addPassthroughCopy("./src/styles/");
-	eleventyConfig.addPassthroughCopy("src/scripts/*.ts");
+	eleventyConfig.addPassthroughCopy("./src/docs/");
+	eleventyConfig.addPassthroughCopy("./src/scripts/*.ts");
 
 	eleventyConfig.addGlobalData("env", {
 		workerUrl: process.env.CLOUDFLARE_WORKER_URL,
