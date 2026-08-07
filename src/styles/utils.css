@@ -93,7 +93,6 @@
   margin: 0 0 0 2rem;
 }
 
-
 .m6{
   margin: 6rem 0;
 }
@@ -114,6 +113,39 @@
 #icon-moon {
   stroke: var(--icon-fill-color);
 }
+
+
+/** Contact Page **/
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li a {
+    color: var(--text-color);
+    position: relative;
+  }
+
+  li a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+  }
+  
+  li a:focus-visible::after,
+  li a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
 
 @media (min-width: 676px) {
   .desktop-nav {
