@@ -11,10 +11,9 @@ title: Home
       <p class="accent label-font">Available for Hire / Freelance Work</p>
 
     <div class="row m6">
-      <button class="btn btn-primary">Get in touch</button>
+      <a href="/contact" class="btn btn-primary">Get in touch</a>
       <a href="/docs/robert_skwiat_resumse_20260616.pdf" target="_blank" class="btn btn-primay-inverse">Download Resume</a>
     </div>
-
 
   </div>
 </div>
