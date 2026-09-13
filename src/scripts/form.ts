@@ -10,7 +10,7 @@ export const contactSchema = z.object({
 });
 
 export function configureContactForm() {
-	const workerUrl = (window as any).WORKER_URL;
+	const workerUrl = (window as unknown as { WORKER_URL: string }).WORKER_URL;
 	const form = document.getElementById(
 		"contact-form",
 	) as HTMLFormElement | null;
