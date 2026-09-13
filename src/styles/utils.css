@@ -68,9 +68,9 @@
 }
 
 .theme-switcher {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
+  /* position: fixed; */
+  /* top: 1rem; */
+  /* right: 1rem; */
   z-index: 1000;
   cursor: pointer;
   background: none;
@@ -118,6 +118,14 @@
 #icon-moon.hidden {
   display: none;
   pointer-events: none;
+}
+
+.navbar {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 2rem 1.8rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 

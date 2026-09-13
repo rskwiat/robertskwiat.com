@@ -4,8 +4,18 @@
 
   <body>
     <main>
-      {% include "components/dark-mode.njk" %}
-
+      <nav class="navbar">
+          <ul>
+    {% for item in settings.navigation %}
+      <li>
+        <a href="{{ item.url }}" data-scroll-to="{{ item.dataScrollTo }}">
+            <span class="tooltip">{{ item.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+        {% include "components/dark-mode.njk" %}
+      </nav>
       <div class="container">
         {{ content | safe }}
 
