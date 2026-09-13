@@ -13,6 +13,8 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_WORKER_URL: ${{ vars.CLOUDFLARE_WORKER_URL }}
     steps:
       - uses: actions/checkout@v4
       
